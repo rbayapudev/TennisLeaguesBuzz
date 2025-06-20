@@ -1,16 +1,59 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>Prodrive</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-      <div class="container">
-        <div>
-           I have voluntarily decided to participate in this Tennis club/league consisting colleagues and friends. Play and practice will occur outside of normal working hours. I understand and agree that I am doing so at my own risk, knowing the inherent risks of playing tennis, and I hereby release the tennis club/league office bearers and their employers, voluntary team organizers and other team members from any and all possible actions, causes of actions, damages, claims or demands against such parties for any and all injuries I may suffer in connection with or resulting from participation with this tennis league/club.
-        </div>
-      </div>
-    </body>
+<head>
+<title>ProDrive Tennis - Participation Disclaimer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body class="text-gray-100 antialiased">
+
+  <!-- Navbar -->
+  <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+    <div class="container mx-auto px-4">
+      <span class="text-3xl font-extrabold text-white">ProDrive Tennis</span>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl w-full text-center border border-white border-opacity-30">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+        Participation Disclaimer
+      </h1>
+      <p class="text-lg md:text-xl mb-8 text-gray-200 text-left">
+        I have voluntarily decided to participate in this Tennis club/league consisting colleagues and friends. Play and practice will occur outside of normal working hours. I understand and agree that I am doing so at my own risk, knowing the inherent risks of playing tennis, and I hereby release the tennis club/league office bearers and their employers, voluntary team organizers and other team members from any and all possible actions, causes of actions, damages, claims or demands against such parties for any and all injuries I may suffer in connection with or resulting from participation with this tennis league/club.
+      </p>
+    </div>
+
+    <div class="mt-10 text-gray-300 text-sm">
+      <p>&copy; 2025 ProDrive Tennis. All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
 </html>
