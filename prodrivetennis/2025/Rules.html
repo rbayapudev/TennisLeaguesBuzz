@@ -1,15 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rules Page</title>
+<title>ProDrive Tennis Season 2025 - Rules</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack navbar and content */
+    justify-content: flex-start; /* Align content to start to make room for cards */
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0; /* Remove padding from body as content will have it */
+    box-sizing: border-box;
+  }
+  /* Ensure the main content div takes available height */
+  .main-content {
+    flex-grow: 1; /* Allows main content to fill remaining space */
+    display: flex;
+    flex-direction: column; /* Changed to column to stack update message and cards */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure it spans full width */
+    padding: 20px; /* Add padding here for responsive spacing */
+    box-sizing: border-box;
+  }
+  /* Specific styling for the update message box to push cards below */
+  .update-message-box {
+    margin-bottom: 30px; /* Space between message box and cards */
+  }
+</style>
 </head>
-<body>
-    <h1>Welcome to Rules Page!</h1>
-    <p>This is a very basic HTML file.</p>
+<body class="text-gray-100 antialiased">
 
-    <p>Thanks for visiting!</p>
+  <!-- Navbar -->
+  <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+    <div class="container mx-auto px-4">
+      <span class="text-3xl font-extrabold text-white">ProDrive Tennis</span>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+
+    <!-- Game Rules Section -->
+    <div class="w-full max-w-4xl grid grid-cols-1 gap-6">
+      <!-- Rule Card 1 -->
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-center border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white">Match Location</h2>
+        <ul>
+            <li>
+                <p class="text-gray-200">
+                 Both the teams need
+                </p>
+            </li>
+        </ul>
+        
+      </div>
+      <!-- Rule Card 2 -->
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-center border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white">Scoring System</h2>
+        <p class="text-gray-200">
+          Points: 15, 30, 40, Game. Games make sets, sets make matches.
+        </p>
+      </div>
+      <!-- Rule Card 3 -->
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-center border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white">Line Calls</h2>
+        <p class="text-gray-200">
+          Ball hitting any part of the line is considered in.
+        </p>
+      </div>
+      <!-- Rule Card 4 (Example additional card) -->
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-center border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white">Tie-Breaks</h2>
+        <p class="text-gray-200">
+          Used to decide sets tied at 6-6. First to 7 points, win by 2.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 text-gray-300 text-sm">
+      <p>&copy; 2025 ProDrive Tennis. All rights reserved.</p>
+    </div>
+  </div>
 
 </body>
 </html>
