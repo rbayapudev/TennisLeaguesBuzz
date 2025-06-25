@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ProDrive Tennis - Participation Disclaimer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensures this wrapper takes full width */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .tab-content {
+    display: none; /* Hide tab content by default */
+  }
+  .tab-content.active {
+    display: block; /* Show active tab content */
+  }
+  .tab-button.active {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly lighter for active tab */
+  }
+  /* Custom table styling for better transparency and visibility */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .custom-table th, .custom-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for rows */
+  }
+  .custom-table th {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly darker header background */
+    font-weight: 700;
+    color: #E2E8F0; /* gray-200 */
+  }
+  .custom-table tbody tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+  }
+</style>
+</head>
+<body class="text-gray-100 antialiased">
+
+  <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+    <div class="container mx-auto px-4">
+      <span class="text-2xl font-extrabold text-white">ProDrive Tennis</span>
+    </div>
+  </nav>
+
+  <div class="main-content">
+  	<h2 class="text-2xl font-semibold mb-3 text-white text-center">2025 Tournament Registrations</h2>
+    <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 w-full text-center border border-white border-opacity-30">
+      
+      <div class="flex justify-center mb-6 border-b border-white border-opacity-30">
+        <button class="tab-button active flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tl-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" onclick="openTab(event, 'singles')">Singles Registrants</button>
+        <button class="tab-button flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tr-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" onclick="openTab(event, 'doubles')">Doubles Registrants</button>
+      </div>
+
+      <div id="singles" class="tab-content active bg-white bg-opacity-10 rounded-lg p-6 mb-4 text-left">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-white">Singles Participants</h2>
+        <table class="custom-table text-gray-200 text-lg">
+          <thead>
+            <tr>
+            	<th class="rounded-tl-md">#</th>
+              	<th>Registrant</th>
+              	<th class="rounded-tr-md">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            	<td>1</td>
+              	<td>Abhinav Sathiamoorthy</td>
+              	<td>asathiam@mathworks.com</td>
+            </tr>
+            <tr>
+            	<td>2</td>
+              	<td>Anjana Srivastava</td>
+              	<td>asrivast@mathworks.com</td>
+            </tr>
+            <tr>
+            	<td>3</td>
+              	<td>Bindusha Bommareddy</td>
+              	<td>bindusha.b@gmail.com</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Brian Demar Jones</td>
+              <td>bdemarjones82@gmail.com</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Cameron Stabile</td>
+              <td>cameron.stabile@gmail.com</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Chi Zhang</td>
+              <td>chi.zhang@alumni.ucalgary.ca</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Gitesh Nandre</td>
+              <td>gnandre@mathworks.com</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Joshua Nasman</td>
+              <td>joshua.nasman@gmail.com</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Kevin McCauley</td>
+              <td>kevinmccauley2007@gmail.com</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Leah Kazenmayer</td>
+              <td>mayer200121@gmail.com</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Noah Sung</td>
+              <td>noahsung99@gmail.com</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Paola Donis Noriega</td>
+              <td>paodonis@hotmail.com</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Riccardo Consolo</td>
+              <td>rconsolo@mathworks.com</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Robbie Gold</td>
+              <td>18goldr@gmail.com</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Saurabh Gujare</td>
+              <td>gujare.s@northeastern.edu</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Sean Murphy</td>
+              <td>sean.murphy@berkeley.edu</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Shubham Mankar</td>
+              <td>smankar@mathworks.com</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>Tanner Bradford</td>
+              <td>wtannerb@verizon.net</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>Trenton Squires</td>
+              <td>trenton.c.squires@gmail.com</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Yeshwanth Devara</td>
+              <td>yesh.devara@gmail.com</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>Zeeshan Khan</td>
+              <td>zskone77@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="doubles" class="tab-content bg-white bg-opacity-10 rounded-lg p-6 mb-4 text-left">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-white">Doubles Participants</h2>
+        <table class="custom-table text-gray-200 text-lg">
+          <thead>
+            <tr>
+              <th class="rounded-tl-md">Registrant</th>
+              <th class="rounded-tr-md">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eve Adams</td>
+              <td>eve.a@example.com</td>
+            </tr>
+            <tr>
+              <td>Frank Green</td>
+              <td>frank.g@example.com</td>
+            </tr>
+            <tr>
+              <td>Grace Hoppe</td>
+              <td>grace.h@example.com</td>
+            </tr>
+            <tr>
+              <td>Henry Miller</td>
+              <td>henry.m@example.com</td>
+            </tr>
+            <tr>
+              <td>Ivy Jones</td>
+              <td>ivy.j@example.com</td>
+            </tr>
+            <tr>
+              <td>Jack White</td>
+              <td>jack.w@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-gray-300 text-sm">
+      <p>&copy; 2025 Tennis. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tab-content" and hide them
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+
+      // Get all elements with class="tab-button" and remove the "active" class
+      tablinks = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    // Set the default active tab (Singles) when the page loads
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelector('.tab-button').click();
+    });
+  </script>
+
+</body>
+</html>
