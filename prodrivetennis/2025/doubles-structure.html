@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDrive Tennis - Doubles Groups</title>
+    <!-- Tailwind CSS CDN from the theme -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Inter font from the theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Custom styles for dropdown (copied from singles page for consistency) */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            top: 100%;
+            left: 0;
+            transform: translateY(0.5rem);
+            pointer-events: none;
+        }
+        .dropdown-menu a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Playoff table specific styles */
+        .playoff-bracket {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Semis, Final */
+            gap: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .playoff-round {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .playoff-match {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 90%;
+            max-width: 250px; /* Limit width for larger screens */
+            margin-bottom: 0.5rem;
+        }
+        .playoff-match-winner {
+            font-weight: bold;
+            color: #81e6d9; /* A light teal for winners */
+        }
+        .playoff-line {
+            width: 2px;
+            height: 1rem;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .playoff-connect-line {
+            width: 100%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive adjustments for playoff bracket */
+        @media (max-width: 768px) {
+            .playoff-bracket {
+                grid-template-columns: 1fr; /* Stack rounds on small screens */
+            }
+            .playoff-round {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Custom styles for team tables */
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+        .team-table th, .team-table td {
+            padding: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+        }
+        .team-table th {
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: normal;
+            color: #E2E8F0; /* Tailwind gray-200 */
+        }
+        .team-table td {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+
+    <!-- Navbar from the theme -->
+    <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+        <div class="container mx-auto px-4 flex items-center">
+            <a href="#" class="text-2xl font-extrabold text-white no-underline hover:text-gray-200 transition-colors duration-200 mr-8"> ProDrive Tennis</a>
+            <div class="flex items-center">
+                <div class="relative inline-block ml-2 dropdown">
+                    <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                        Groups <span class="ml-1">&#9662;</span> <!-- Down arrow unicode -->
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                        <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                        <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles Groups</a>
+                    </div>
+                </div>
+                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
+                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
+                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl w-full text-center border border-white border-opacity-30">
+            <h1 class="text-2xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                ProDrive Tennis - Doubles Groups
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200 text-left">
+                Doubles teams have been randomly divided into 2 groups for round-robin play.
+            </p>
+
+            <div id="groups-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Groups will be dynamically inserted here by JavaScript -->
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="tennis_doubles_schedule.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    View Doubles Schedule
+                </a>
+            </div>
+        </div>
+
+        <!-- New Playoff Information Section for Doubles -->
+        <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl w-full text-center border border-white border-opacity-30 mt-8">
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 text-white leading-tight">
+                Doubles Playoff Qualification & Bracket
+            </h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-200 text-left">
+                The top two teams from each group will advance to the single-elimination playoff bracket.
+                This section illustrates a potential playoff structure. Actual teams will be determined by group standings.
+            </p>
+
+            <div class="playoff-bracket text-gray-200">
+                <!-- Semi-Finals -->
+                <div class="playoff-round">
+                    <h3 class="text-xl font-bold text-white mb-4">Semi-Finals</h3>
+                    <div class="playoff-match">Winner Group A<br>vs<br>Runner-up Group B</div>
+                    <div class="playoff-line"></div>
+                    <div class="playoff-match">Winner Group B<br>vs<br>Runner-up Group A</div>
+                </div>
+
+                <!-- Final -->
+                <div class="playoff-round">
+                    <h3 class="text-xl font-bold text-white mb-4">Final</h3>
+                    <div class="playoff-match">Winner SF1<br>vs<br>Winner SF2</div>
+                    <div class="playoff-line"></div>
+                    <div class="playoff-match playoff-match-winner text-2xl">Doubles Champions</div>
+                </div>
+            </div>
+        </div>
+        <!-- End New Playoff Information Section -->
+
+        <!-- Footer from the theme -->
+        <div class="mt-10 text-gray-300 text-sm">
+            <p>&copy; 2025 ProDrive Tennis. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // List of all doubles teams (example teams)
+        // Each sub-array represents a team [Player1, Player2]
+        const teams = [
+            ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
+            ["Bindusha Bommareddy", "Yeshwanth Devara"],
+            ["Brian Demar Jones", "Gitesh Nandre"],
+            ["Cameron Stabile", "David Fern"],
+            ["Dewi Nilamsari", "Noah Sung"],
+            ["Ileen Thelen", "Mike"],
+            ["Kevin McCauley", "Zeeshan Khan"],
+            ["Riccardo Consolo", "Paola Donis Noriega"],
+            ["Saurabh Gujare", "Trenton Squires"],
+            ["Tanner Bradford", "Tori York"]
+        ];
+
+        // Function to shuffle an array randomly (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+            return array;
+        }
+
+        // Function to divide teams into groups
+        function divideIntoGroups(teams, numGroups) {
+            const shuffledTeams = shuffleArray([...teams]); // Shuffle a copy
+            const groups = Array.from({ length: numGroups }, () => []);
+            let groupIndex = 0;
+
+            shuffledTeams.forEach(team => {
+                groups[groupIndex].push(team);
+                groupIndex = (groupIndex + 1) % numGroups; // Cycle through groups
+            });
+            return groups;
+        }
+
+        // Number of groups desired for doubles
+        const numDoublesGroups = 2;
+        const doublesTeamsGroups = divideIntoGroups(teams, numDoublesGroups);
+
+        // Store groups in localStorage so the schedule page can access them
+        localStorage.setItem('tennisDoublesGroups', JSON.stringify(doublesTeamsGroups));
+
+        // Display groups on the page
+        const groupsContainer = document.getElementById('groups-container');
+        doublesTeamsGroups.forEach((group, index) => {
+            const groupDiv = document.createElement('div');
+            // Adjusted classes for better visibility on the new background
+            groupDiv.className = 'bg-white bg-opacity-10 p-6 rounded-xl shadow-md border border-white border-opacity-30 text-left';
+            groupDiv.innerHTML = `
+                <h2 class="text-2xl font-bold text-white mb-4">Group ${String.fromCharCode(65 + index)}</h2>
+                <div class="overflow-x-auto">
+                    <table class="team-table">
+                        <thead>
+                            <tr>
+                                <th>Team Name</th>
+                                <th>Player 1</th>
+                                <th>Player 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${group.map((team, teamIdx) => `
+                                <tr>
+                                    <td>Team ${groupLetter(index)}${teamIdx + 1}</td>
+                                    <td>${team[0]}</td>
+                                    <td>${team[1]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            groupsContainer.appendChild(groupDiv);
+        });
+
+        // Helper function for group letter (A, B, C...)
+        function groupLetter(index) {
+            return String.fromCharCode(65 + index);
+        }
+
+        // Dropdown toggle logic (copied from singles page for consistency)
+        document.addEventListener('DOMContentLoaded', function() {
+            const groupsDropdownButton = document.getElementById('groupsDropdownButton');
+            const dropdown = groupsDropdownButton.closest('.dropdown');
+
+            groupsDropdownButton.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            window.addEventListener('click', function(event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
