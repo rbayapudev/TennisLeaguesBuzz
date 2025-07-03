@@ -228,34 +228,38 @@
             "Yeshwanth Devara", "Zeeshan Khan"
         ];
 
-        // Function to shuffle an array randomly (Fisher-Yates shuffle)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-            }
-            return array;
-        }
-
-        // Function to divide players into groups
-        function divideIntoGroups(players, numGroups) {
-            const shuffledPlayers = shuffleArray([...players]); // Shuffle a copy
-            const groups = Array.from({ length: numGroups }, () => []);
-            let groupIndex = 0;
-
-            shuffledPlayers.forEach(player => {
-                groups[groupIndex].push(player);
-                groupIndex = (groupIndex + 1) % numGroups; // Cycle through groups
-            });
-            return groups;
-        }
-
         // Number of groups desired
         const numGroups = 4;
-        const playerGroups = divideIntoGroups(players, numGroups);
-
-        // Store groups in localStorage so the schedule page can access them
-        localStorage.setItem('tennisPlayerGroups', JSON.stringify(playerGroups));
+        const playerGroups = [
+            [
+                "Kevin McCauley",
+                "Sean Murphy",
+                "Riccardo Consolo",
+                "Shubham Mankar",
+                "Yeshwanth Devara"
+            ],
+            [
+                "Saurabh Gujare",
+                "Gitesh Nandre",
+                "Leah Kazenmayer",
+                "Bindusha Bommareddy",
+                "Trenton Squires"
+            ],
+            [
+                "Anjana Srivastava",
+                "Noah Sung",
+                "Robbie Gold",
+                "Paola Donis Noriega",
+                "Cameron Stabile"
+            ],
+            [
+                "Tanner Bradford",
+                "Abhinav Sathiamoorthy",
+                "Brian Demar Jones",
+                "Zeeshan Khan",
+                "Joshua Nasman"
+            ]
+        ];
 
         // Display groups on the page
         const groupsContainer = document.getElementById('groups-container');
