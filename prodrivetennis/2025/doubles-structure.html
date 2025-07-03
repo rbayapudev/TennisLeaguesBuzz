@@ -223,7 +223,7 @@
     </div>
 
     <script>
-        // List of all doubles teams (example teams)
+        // List of all doubles teams
         // Each sub-array represents a team [Player1, Player2]
         const teams = [
             ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
@@ -238,31 +238,22 @@
             ["Tanner Bradford", "Tori York"]
         ];
 
-        // Function to shuffle an array randomly (Fisher-Yates shuffle)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-            }
-            return array;
-        }
-
-        // Function to divide teams into groups
-        function divideIntoGroups(teams, numGroups) {
-            const shuffledTeams = shuffleArray([...teams]); // Shuffle a copy
-            const groups = Array.from({ length: numGroups }, () => []);
-            let groupIndex = 0;
-
-            shuffledTeams.forEach(team => {
-                groups[groupIndex].push(team);
-                groupIndex = (groupIndex + 1) % numGroups; // Cycle through groups
-            });
-            return groups;
-        }
-
-        // Number of groups desired for doubles
-        const numDoublesGroups = 2;
-        const doublesTeamsGroups = divideIntoGroups(teams, numDoublesGroups);
+        const doublesTeamsGroups = [
+            [
+                ["Ileen Thelen", "Mike"],
+                ["Saurabh Gujare", "Trenton Squires"],
+                ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
+                ["Tanner Bradford", "Tori York"],
+                ["Bindusha Bommareddy", "Yeshwanth Devara"]
+            ],
+            [
+                ["Cameron Stabile", "David Fern"],
+                ["Brian Demar Jones", "Gitesh Nandre"],
+                ["Riccardo Consolo", "Paola Donis Noriega"],
+                ["Kevin McCauley", "Zeeshan Khan"],
+                ["Dewi Nilamsari", "Noah Sung"]
+            ]
+        ];
 
         // Store groups in localStorage so the schedule page can access them
         localStorage.setItem('tennisDoublesGroups', JSON.stringify(doublesTeamsGroups));
