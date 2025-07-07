@@ -37,17 +37,39 @@ function generateRoundRobinSchedule(players) {
     return schedule;
 }
 
+const playerGroups = [
+    [
+        "Kevin McCauley",
+        "Riccardo Consolo",
+        "Shubham Mankar",
+        "Yeshwanth Devara"
+    ],
+    [
+        "Saurabh Gujare",
+        "Gitesh Nandre",
+        "Leah Kazenmayer",
+        "Bindusha Bommareddy",
+        "Trenton Squires"
+    ],
+    [
+        "Anjana Srivastava",
+        "Noah Sung",
+        "Robbie Gold",
+        "Paola Donis Noriega",
+        "Cameron Stabile"
+    ],
+    [
+        "Tanner Bradford",
+        "Abhinav Sathiamoorthy",
+        "Brian Demar Jones",
+        "Zeeshan Khan",
+        "Joshua Nasman"
+    ]
+];
+
 // Function to display the schedules on the page
 function displaySchedules() {
     const scheduleContainer = document.getElementById('schedule-container');
-    const playerGroupsJSON = localStorage.getItem('tennisSinglesGroups');
-
-    if (!playerGroupsJSON) {
-        scheduleContainer.innerHTML = '<p class="text-red-300 text-lg">Player group data not found in local storage. Please visit the Singles Groups page first.</p>';
-        return;
-    }
-
-    const playerGroups = JSON.parse(playerGroupsJSON);
 
     playerGroups.forEach((group, index) => {
         const groupLetter = String.fromCharCode(65 + index);
