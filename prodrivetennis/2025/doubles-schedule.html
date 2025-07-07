@@ -20,7 +20,7 @@
         // Create and append CSS link
         const cssLink = document.createElement('link');
         cssLink.rel = 'stylesheet';
-        cssLink.href = 'doubles-schedule.css?v=' + timestampCss; // Link to the new CSS file
+        cssLink.href = './css/doubles-schedule.css?v=' + timestampCss; // Link to the new CSS file
         document.head.appendChild(cssLink);
     </script>
 </head>
@@ -82,7 +82,7 @@
 
         // Create and append JavaScript script
         const jsScript = document.createElement('script');
-        jsScript.src = 'doubles-schedule.js?v=' + timestampJs; // Link to the new JS file
+        jsScript.src = './js/doubles-schedule.js?v=' + timestampJs; // Link to the new JS file
         jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
         document.body.appendChild(jsScript);
     </script>
