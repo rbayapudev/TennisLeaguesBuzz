@@ -4,7 +4,7 @@ const players = [
     "Brian Demar Jones", "Cameron Stabile", "Gitesh Nandre",
     "Joshua Nasman", "Kevin McCauley", "Leah Kazenmayer",
     "Noah Sung", "Paola Donis Noriega", "Riccardo Consolo",
-    "Robbie Gold", "Saurabh Gujare", "Sean Murphy",
+    "Robbie Gold", "Saurabh Gujare",
     "Shubham Mankar", "Tanner Bradford", "Trenton Squires",
     "Yeshwanth Devara", "Zeeshan Khan"
 ];
@@ -14,7 +14,6 @@ const numGroups = 4; // This variable is not used in the provided JS, but kept f
 const playerGroups = [
     [
         "Kevin McCauley",
-        "Sean Murphy",
         "Riccardo Consolo",
         "Shubham Mankar",
         "Yeshwanth Devara"
