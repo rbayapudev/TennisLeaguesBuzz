@@ -13,7 +13,6 @@
     <!-- Inter font from the theme -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- ⭐⭐⭐ CLIENT-SIDE DYNAMIC CACHE BUSTING SCRIPT for CSS ⭐⭐⭐ -->
     <script>
         // Get current timestamp for cache busting
         const timestampCss = new Date().getTime();
@@ -24,7 +23,6 @@
         cssLink.href = 'doubles-schedule.css?v=' + timestampCss; // Link to the new CSS file
         document.head.appendChild(cssLink);
     </script>
-    <!-- ⭐⭐⭐ END CLIENT-SIDE DYNAMIC CACHE BUSTING SCRIPT for CSS ⭐⭐⭐ -->
 </head>
 <body class="text-gray-100 antialiased">
 
