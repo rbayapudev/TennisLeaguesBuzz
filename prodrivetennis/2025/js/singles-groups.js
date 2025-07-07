@@ -41,6 +41,9 @@ const playerGroups = [
     ]
 ];
 
+// Store groups in localStorage so the schedule page can access them
+localStorage.setItem('tennisSinglesGroups', JSON.stringify(playerGroups));
+
 // Display groups on the page
 const groupsContainer = document.getElementById('groups-container');
 playerGroups.forEach((group, index) => {
