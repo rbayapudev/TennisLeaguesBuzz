@@ -19,13 +19,13 @@ function generateRoundRobinSchedule(players) {
             const player1 = participants[i];
             const player2 = participants[participants.length - 1 - i];
 
-            // Only add a match if neither player is 'BYE'
+            // Store matches as objects for easier rendering in table columns
             if (player1 !== "BYE" && player2 !== "BYE") {
-                weekMatches.push(`${player1} vs ${player2}`);
+                weekMatches.push({ player1: player1, player2: player2, type: 'match' });
             } else if (player1 === "BYE") {
-                weekMatches.push(`${player2} has a BYE`);
+                weekMatches.push({ player1: player2, player2: 'BYE', type: 'bye' }); // Player 2 has a BYE
             } else if (player2 === "BYE") {
-                weekMatches.push(`${player1} has a BYE`);
+                weekMatches.push({ player1: player1, player2: 'BYE', type: 'bye' }); // Player 1 has a BYE
             }
         }
         schedule.push(weekMatches);
@@ -84,7 +84,6 @@ function displaySchedules() {
         return;
     }
 
-    // Changed from forEach to a standard for loop
     for (let index = 0; index < playerGroups.length; index++) {
         const group = playerGroups[index];
         const groupLetter = String.fromCharCode(65 + index);
@@ -99,20 +98,24 @@ function displaySchedules() {
                     <thead>
                         <tr>
                             <th>Week</th>
-                            <th>Matches</th>
+                            <th>Player 1</th>
+                            <th>Player 2</th>
+                            <th>Score</th>
                         </tr>
                     </thead>
                     <tbody>
-                        ${groupSchedule.map((weekMatches, weekIndex) => `
-                            <tr>
-                                <td>Week ${weekIndex + 1}</td>
-                                <td>
-                                    <ul class="list-disc list-inside space-y-1">
-                                        ${weekMatches.map(match => `<li>${match}</li>`).join('')}
-                                    </ul>
-                                </td>
-                            </tr>
-                        `).join('')}
+                        ${groupSchedule.map((weekMatches, weekIndex) => {
+                            // Calculate rowspan for the week
+                            const rowspan = weekMatches.length;
+                            return weekMatches.map((match, matchIndex) => `
+                                <tr>
+                                    ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex + 1}</td>` : ''}
+                                    <td>${match.player1}</td>
+                                    <td>${match.type === 'bye' ? 'BYE' : match.player2}</td>
+                                    <td>${match.type === 'bye' ? '' : ' - '}</td> <!-- Placeholder for score -->
+                                </tr>
+                            `).join('');
+                        }).join('')}
                     </tbody>
                 </table>
             </div>
