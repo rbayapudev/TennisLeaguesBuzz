@@ -1,0 +1,109 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Custom styles for dropdown (copied from singles page for consistency) */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    transform: translateY(0.5rem);
+    pointer-events: none;
+}
+.dropdown-menu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Schedule specific styles */
+.group-schedule-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+    width: 100%;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: #E2E8F0; /* Tailwind gray-200 */
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+}
+
+.schedule-table td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content > div { /* Target the main content card */
+        padding: 1rem;
+    }
+    .group-schedule-card {
+        padding: 1rem;
+    }
+    .schedule-table th, .schedule-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
