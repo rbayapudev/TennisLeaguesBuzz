@@ -11,6 +11,7 @@ function populateSinglesTable() {
             <td>${player.id}</td>
             <td>${player.name}</td>
             <td>${player.email}</td>
+            <td>${player.phone}</td>
         </tr>
     `).join('');
 }
@@ -27,8 +28,10 @@ function populateDoublesTable() {
             <td>${team.id}</td>
             <td>${team.player1}</td>
             <td>${team.email1}</td>
+            <td>${team.phone1}</td>
             <td>${team.player2}</td>
             <td>${team.email2}</td>
+            <td>${team.phone2}</td>
         </tr>
     `).join('');
 }
