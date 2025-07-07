@@ -40,7 +40,7 @@ function generateRoundRobinSchedule(players) {
 // Function to display the schedules on the page
 function displaySchedules() {
     const scheduleContainer = document.getElementById('schedule-container');
-    const playerGroupsJSON = localStorage.getItem('tennisPlayerGroups');
+    const playerGroupsJSON = localStorage.getItem('tennisSinglesGroups');
 
     if (!playerGroupsJSON) {
         scheduleContainer.innerHTML = '<p class="text-red-300 text-lg">Player group data not found in local storage. Please visit the Singles Groups page first.</p>';
