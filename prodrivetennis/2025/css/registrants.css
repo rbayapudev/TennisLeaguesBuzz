@@ -1,0 +1,48 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensures this wrapper takes full width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+.tab-content {
+    display: none; /* Hide tab content by default */
+}
+.tab-content.active {
+    display: block; /* Show active tab content */
+}
+.tab-button.active {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly lighter for active tab */
+}
+/* Custom table styling for better transparency and visibility */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.custom-table th, .custom-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for rows */
+}
+.custom-table th {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly darker header background */
+    font-weight: 700;
+    color: #E2E8F0; /* gray-200 */
+}
+.custom-table tbody tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+}
