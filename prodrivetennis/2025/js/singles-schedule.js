@@ -37,9 +37,11 @@ function generateRoundRobinSchedule(players) {
     return schedule;
 }
 
+// Player group data directly embedded for independence
 const playerGroups = [
     [
         "Kevin McCauley",
+        "Sean Murphy",
         "Riccardo Consolo",
         "Shubham Mankar",
         "Yeshwanth Devara"
@@ -69,7 +71,19 @@ const playerGroups = [
 
 // Function to display the schedules on the page
 function displaySchedules() {
+    console.log("displaySchedules function called."); // ⭐ Debugging log ⭐
     const scheduleContainer = document.getElementById('schedule-container');
+
+    if (!scheduleContainer) {
+        console.error("Error: 'schedule-container' element not found in the DOM.");
+        return;
+    }
+
+    if (playerGroups.length === 0) {
+        scheduleContainer.innerHTML = '<p class="text-red-300 text-lg">No player group data available to generate schedule.</p>';
+        console.warn("No player group data available.");
+        return;
+    }
 
     playerGroups.forEach((group, index) => {
         const groupLetter = String.fromCharCode(65 + index);
@@ -104,6 +118,7 @@ function displaySchedules() {
         `;
         scheduleContainer.appendChild(groupDiv);
     });
+    console.log("Schedules should now be displayed."); // ⭐ Debugging log ⭐
 }
 
 // Dropdown toggle logic (replicated for this page's navbar)
