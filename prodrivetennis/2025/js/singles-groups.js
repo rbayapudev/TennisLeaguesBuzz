@@ -10,9 +10,30 @@ singlesPlayerGroups.forEach((group, index) => {
     groupDiv.className = 'bg-white bg-opacity-10 p-6 rounded-xl shadow-md border border-white border-opacity-30 text-left';
     groupDiv.innerHTML = `
         <h2 class="text-2xl font-bold text-white mb-4">Group ${String.fromCharCode(65 + index)}</h2>
-        <ul class="list-disc list-inside space-y-2 text-gray-200">
-            ${group.map(player => `<li class="text-lg">${player.name}</li>`).join('')}
-        </ul>
+        <div class="overflow-x-auto">
+            <table class="team-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Won</th>
+                        <th>Lost</th>
+                        <th>Draw</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${group.map((player, teamIdx) => `
+                        <tr>
+                            <td>${player.name}</td>
+                            <td>${player.won}</td>
+                            <td>${player.lost}</td>
+                            <td>${player.draw}</td>
+                            <td>${player.points}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
     `;
     groupsContainer.appendChild(groupDiv);
 });
