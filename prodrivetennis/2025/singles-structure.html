@@ -113,12 +113,16 @@
     </div>
 
     <script>
-        // Get current timestamp (re-using the same variable is fine, or define again)
-        const timestampForJs = new Date().getTime();
-
+        // Get current timestamp for cache busting
+        const timestampJs = new Date().getTime();
+        // Create and append JavaScript script
+        const playerJsScript = document.createElement('script');
+        playerJsScript.src = './js/player-registrants.js?v=' + timestampJs; // Link to the new JS file
+        document.body.appendChild(playerJsScript);
+        // Load the script file
         // Create and append JavaScript script
         const jsScript = document.createElement('script');
-        jsScript.src = './js/singles-groups.js?v=' + timestampForJs; // Link to the new JS file
+        jsScript.src = './js/singles-groups.js?v=' + timestampJs; // Link to the new JS file
         jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
         document.body.appendChild(jsScript);
     </script>
