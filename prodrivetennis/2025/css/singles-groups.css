@@ -111,3 +111,23 @@ body {
         margin-bottom: 1rem;
     }
 }
+
+/* Custom styles for team tables */
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+.team-table th, .team-table td {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+.team-table th {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: normal;
+    color: #E2E8F0; /* Tailwind gray-200 */
+}
+.team-table td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
