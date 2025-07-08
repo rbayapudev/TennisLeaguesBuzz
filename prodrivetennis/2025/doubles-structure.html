@@ -39,13 +39,13 @@
                     <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
                         Groups <span class="ml-1">&#9662;</span> </button>
                     <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
-                        <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
-                        <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles Groups</a>
+                        <a href="singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                        <a href="doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles Groups</a>
                     </div>
                 </div>
-                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
-                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
-                <a href="https://www.tennisleaguesbuzz.com/prodrivetennis/2025/terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
+                <a href="registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
+                <a href="rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
+                <a href="terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
             </div>
         </div>
     </nav>
@@ -100,11 +100,16 @@
     </div>
 
     <script>
-        // Get current timestamp (re-using the same variable is fine, or define again)
-        const timestampForJs = new Date().getTime();
+        // Get current timestamp for cache busting
+        const timestampJs = new Date().getTime();
+        // Create and append JavaScript script
+        const playerJsScript = document.createElement('script');
+        playerJsScript.src = './js/player-registrants.js?v=' + timestampJs; // Link to the new JS file
+        document.body.appendChild(playerJsScript);
+        // Load the script file
         // Create and append JavaScript script
         const jsScript = document.createElement('script');
-        jsScript.src = './js/doubles-groups.js?v=' + timestampForJs;
+        jsScript.src = './js/doubles-groups.js?v=' + timestampJs;
         jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
         document.body.appendChild(jsScript);
     </script>
