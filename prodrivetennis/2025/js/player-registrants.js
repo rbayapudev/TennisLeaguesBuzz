@@ -35,3 +35,34 @@ const doublesParticipants = [
     { id: 9, player1: "Saurabh Gujare", email1: "gujare.s@northeastern.edu", phone1: "8578694580", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143"  },
     { id: 10, player1: "Tanner Bradford", email1: "wtannerb@verizon.net", phone1: "4129797016", player2: "Tori York", email2: "tori.york20@gmail.com", phone2: "8609463659"  }
 ];
+
+const singlesPlayerGroups = [
+    [
+        { id: 8, name: "Kevin McCauley", email: "kevinmccauley2007@gmail.com", phone: "9786603640", won: "", lost: "", point: ""  },
+        { id: 12, name: "Riccardo Consolo", email: "rconsolo@mathworks.com", phone: "6178165326", won: "", lost: "", point: ""    },
+        { id: 14, name: "Rohan Phadnis", email: "rohan.phadnis.usa@gmail.com", phone: "9253230514", won: "", lost: "", point: ""    },
+        { id: 16, name: "Shubham Mankar", email: "smankar@mathworks.com", phone: "", won: "", lost: "", point: ""    },
+        { id: 19, name: "Yeshwanth Devara", email: "yesh.devara@gmail.com", phone: "3528719551", won: "", lost: "", point: ""    }
+    ],
+    [
+        { id: 15, name: "Saurabh Gujare", email: "gujare.s@northeastern.edu", phone: "8578694580", won: "", lost: "", point: ""    },
+        { id: 6, name: "Gitesh Nandre", email: "gnandre@mathworks.com", phone: "3477467380", won: "", lost: "", point: ""    },
+        { id: 9, name: "Leah Kazenmayer", email: "mayer200121@gmail.com", phone: "7328650205", won: "", lost: "", point: ""    },
+        { id: 3, name: "Bindusha Bommareddy", email: "bindusha.b@gmail.com", phone: "9086198618", won: "", lost: "", point: ""    },
+        { id: 18, name: "Trenton Squires", email: "trenton.c.squires@gmail.com", phone: "7176453143", won: "", lost: "", point: ""    }
+    ],
+    [
+        { id: 2, name: "Anjana Srivastava", email: "asrivast@mathworks.com", phone: "9789059561", won: "", lost: "", point: ""    },
+        { id: 10, name: "Noah Sung", email: "noahsung99@gmail.com", phone: "8472070038", won: "", lost: "", point: ""    },
+        { id: 13, name: "Robbie Gold", email: "18goldr@gmail.com", phone: "6177753997", won: "", lost: "", point: ""    },
+        { id: 11, name: "Paola Donis Noriega", email: "paodonis@hotmail.com", phone: "4103407822", won: "", lost: "", point: ""    },
+        { id: 5, name: "Cameron Stabile", email: "cameron.stabile@gmail.com", phone: "9084624706", won: "", lost: "", point: ""    }
+    ],
+    [
+        { id: 17, name: "Tanner Bradford", email: "wtannerb@verizon.net", phone: "4129797016", won: "", lost: "", point: ""    },
+        { id: 1, name: "Abhinav Sathiamoorthy", email: "asathiam@mathworks.com", phone: "9133517197", won: "", lost: "", point: ""   },
+        { id: 4, name: "Brian Demar Jones", email: "bdemarjones82@gmail.com", phone: "6077689496", won: "", lost: "", point: ""    },
+        { id: 20, name: "Zeeshan Khan", email: "zskone77@gmail.com", phone: "4436919290", won: "", lost: "", point: ""    },
+        { id: 7, name: "Joshua Nasman", email: "joshua.nasman@gmail.com", phone: "7742689246", won: "", lost: "", point: ""  }
+    ]
+];
