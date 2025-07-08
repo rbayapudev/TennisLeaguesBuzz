@@ -66,3 +66,20 @@ const singlesPlayerGroups = [
         { id: 7, name: "Joshua Nasman", email: "joshua.nasman@gmail.com", phone: "7742689246", won: "", lost: "", point: ""  }
     ]
 ];
+
+const doublesTeamsGroups = [
+    [
+        { id: 6, player1: "Ileen Thelen", email1: "ipinhasi@gmail.com", phone1: "6178039818", player2: "Mike", email2: "", phone2: ""  },
+        { id: 9, player1: "Saurabh Gujare", email1: "gujare.s@northeastern.edu", phone1: "8578694580", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143"  },
+        { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Abhinav Sathiamoorthy", email2: "asathiam@mathworks.com", phone2: "9133517197" },
+        { id: 10, player1: "Tanner Bradford", email1: "wtannerb@verizon.net", phone1: "4129797016", player2: "Tori York", email2: "tori.york20@gmail.com", phone2: "8609463659"  },
+        { id: 2, player1: "Bindusha Bommareddy", email1: "bindusha.b@gmail.com", phone1: "9086198618", player2: "Yeshwanth Devara", email2: "yesh.devara@gmail.com", phone2: "3528719551"  }
+    ],
+    [
+        { id: 4, player1: "Cameron Stabile", email1: "cameron.stabile@gmail.com", phone1: "9084624706", player2: "David Fern", email2: "davidfink314@gmail.com", phone2: "9782012212"  },
+        { id: 3, player1: "Brian Demar Jones", email1: "bdemarjones82@gmail.com", phone1: "6077689496", player2: "Gitesh Nandre", email2: "gnandre@mathworks.com", phone2: "3477467380"  },
+        { id: 8, player1: "Riccardo Consolo", email1: "rconsolo@mathworks.com", phone1: "6178165326", player2: "Paola Donis Noriega", email2: "paodonis@hotmail.com", phone2: "4103407822"  },
+        { id: 7, player1: "Kevin McCauley", email1: "kevinmccauley2007@gmail.com", phone1: "9786603640", player2: "Zeeshan Khan", email2: "zskone77@gmail.com", phone2: "4436919290"  },
+        { id: 5, player1: "Dewi Nilamsari", email1: "dnilamsari23@gmail.com", phone1: "5088636907", player2: "Noah Sung", email2: "noahsung99@gmail.com", phone2: "8472070038"  }
+    ]
+];
