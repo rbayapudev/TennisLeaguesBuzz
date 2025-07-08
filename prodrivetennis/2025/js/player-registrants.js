@@ -13,12 +13,13 @@ const singlesParticipants = [
     { id: 11, name: "Paola Donis Noriega", email: "paodonis@hotmail.com", phone: "4103407822"  },
     { id: 12, name: "Riccardo Consolo", email: "rconsolo@mathworks.com", phone: "6178165326"  },
     { id: 13, name: "Robbie Gold", email: "18goldr@gmail.com", phone: "6177753997"  },
-    { id: 14, name: "Saurabh Gujare", email: "gujare.s@northeastern.edu", phone: "8578694580"  },
-    { id: 15, name: "Shubham Mankar", email: "smankar@mathworks.com", phone: ""  },
-    { id: 16, name: "Tanner Bradford", email: "wtannerb@verizon.net", phone: "4129797016"  },
-    { id: 17, name: "Trenton Squires", email: "trenton.c.squires@gmail.com", phone: "7176453143"  },
-    { id: 18, name: "Yeshwanth Devara", email: "yesh.devara@gmail.com", phone: "3528719551"  },
-    { id: 19, name: "Zeeshan Khan", email: "zskone77@gmail.com", phone: "4436919290"  }
+    { id: 14, name: "Rohan Phadnis", email: "rohan.phadnis.usa@gmail.com", phone: "9253230514"  },
+    { id: 15, name: "Saurabh Gujare", email: "gujare.s@northeastern.edu", phone: "8578694580"  },
+    { id: 16, name: "Shubham Mankar", email: "smankar@mathworks.com", phone: ""  },
+    { id: 17, name: "Tanner Bradford", email: "wtannerb@verizon.net", phone: "4129797016"  },
+    { id: 18, name: "Trenton Squires", email: "trenton.c.squires@gmail.com", phone: "7176453143"  },
+    { id: 19, name: "Yeshwanth Devara", email: "yesh.devara@gmail.com", phone: "3528719551"  },
+    { id: 20, name: "Zeeshan Khan", email: "zskone77@gmail.com", phone: "4436919290"  }
 ];
 
 // Player data for Doubles Participants
