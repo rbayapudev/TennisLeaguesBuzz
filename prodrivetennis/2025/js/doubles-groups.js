@@ -1,37 +1,6 @@
-// List of all doubles teams
-// Each sub-array represents a team [Player1, Player2]
-const teams = [
-    ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
-    ["Bindusha Bommareddy", "Yeshwanth Devara"],
-    ["Brian Demar Jones", "Gitesh Nandre"],
-    ["Cameron Stabile", "David Fern"],
-    ["Dewi Nilamsari", "Noah Sung"],
-    ["Ileen Thelen", "Mike"],
-    ["Kevin McCauley", "Zeeshan Khan"],
-    ["Riccardo Consolo", "Paola Donis Noriega"],
-    ["Saurabh Gujare", "Trenton Squires"],
-    ["Tanner Bradford", "Tori York"]
-];
-
-const doublesTeamsGroups = [
-    [
-        ["Ileen Thelen", "Mike"],
-        ["Saurabh Gujare", "Trenton Squires"],
-        ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
-        ["Tanner Bradford", "Tori York"],
-        ["Bindusha Bommareddy", "Yeshwanth Devara"]
-    ],
-    [
-        ["Cameron Stabile", "David Fern"],
-        ["Brian Demar Jones", "Gitesh Nandre"],
-        ["Riccardo Consolo", "Paola Donis Noriega"],
-        ["Kevin McCauley", "Zeeshan Khan"],
-        ["Dewi Nilamsari", "Noah Sung"]
-    ]
-];
-
+// doublesTeamsGroups injected from outside
 // Store groups in localStorage so the schedule page can access them
-localStorage.setItem('tennisDoublesGroups', JSON.stringify(doublesTeamsGroups));
+localStorage.setItem('doublesTeamsGroups', JSON.stringify(doublesTeamsGroups));
 
 // Display groups on the page
 const groupsContainer = document.getElementById('groups-container');
@@ -54,8 +23,8 @@ doublesTeamsGroups.forEach((group, index) => {
                     ${group.map((team, teamIdx) => `
                         <tr>
                             <td>Team ${groupLetter(index)}${teamIdx + 1}</td>
-                            <td>${team[0]}</td>
-                            <td>${team[1]}</td>
+                            <td>${team.player1}</td>
+                            <td>${team.player2}</td>
                         </tr>
                     `).join('')}
                 </tbody>
