@@ -1,3 +1,4 @@
+import { singlesParticipants, doublesParticipants } from "./player-registrants.js";
 
 // Function to populate the singles table
 function populateSinglesTable() {
