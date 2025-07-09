@@ -1,6 +1,4 @@
-// singlesPlayerGroups is injected
-// Store groups in localStorage so the schedule page can access them
-localStorage.setItem('singlesPlayerGroups', JSON.stringify(singlesPlayerGroups));
+import { singlesPlayerGroups } from "./player-registrants.js";
 
 // Display groups on the page
 const groupsContainer = document.getElementById('groups-container');
