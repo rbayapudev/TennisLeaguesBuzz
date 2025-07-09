@@ -100,9 +100,18 @@ window.onload = function() {
         }
     });
 
+    // Handle the tab change event
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const tabName = this.textContent.toLowerCase().includes('singles') ? 'singles' : 'doubles'; // Or get from data-attribute
+            openTab(event, tabName);
+        });
+    });
+
     // Set the default active tab (Singles) and populate its table when the page loads
     const defaultTabButton = document.querySelector('.tab-button');
     if (defaultTabButton) {
-        defaultTabButton.click(); // This will also call populateSinglesTable()
+        defaultTabButton.click(); // This will also call populateSinglesTable() via the event listener
     }
 };

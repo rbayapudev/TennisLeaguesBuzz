@@ -60,8 +60,8 @@
     <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 w-full max-w-6xl text-center border border-white border-opacity-30">
         
       <div class="flex justify-center mb-6 border-b border-white border-opacity-30">
-        <button class="tab-button active flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tl-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" onclick="openTab(event, 'singles')">Singles Registrants</button>
-        <button class="tab-button flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tr-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" onclick="openTab(event, 'doubles')">Doubles Registrants</button>
+        <button class="tab-button active flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tl-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" >Singles Registrants</button>
+        <button class="tab-button flex-1 py-3 px-4 text-white text-lg font-semibold rounded-tr-lg transition-colors duration-200 hover:bg-opacity-40 focus:outline-none" >Doubles Registrants</button>
       </div>
 
       <div id="singles" class="tab-content active bg-white bg-opacity-10 rounded-lg p-6 mb-4 text-left">
@@ -122,7 +122,8 @@
 
     const jsScript = document.createElement('script');
     jsScript.src = './js/registrants.js?v=' + timestampJs; // Link to the new JS file
-    jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
+    jsScript.type="module";
+    //jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
     document.body.appendChild(jsScript);
 </script>
 
