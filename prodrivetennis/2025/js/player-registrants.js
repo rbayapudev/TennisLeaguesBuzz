@@ -1,5 +1,5 @@
 // Player data for Singles Participants
-const singlesParticipants = [
+export const singlesParticipants = [
     { id: 1, name: "Abhinav Sathiamoorthy", email: "asathiam@mathworks.com", phone: "9133517197" },
     { id: 2, name: "Anjana Srivastava", email: "asrivast@mathworks.com", phone: "9789059561"  },
     { id: 3, name: "Bindusha Bommareddy", email: "bindusha.b@gmail.com", phone: "9086198618"  },
@@ -23,7 +23,7 @@ const singlesParticipants = [
 ];
 
 // Player data for Doubles Participants
-const doublesParticipants = [
+export const doublesParticipants = [
     { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Abhinav Sathiamoorthy", email2: "asathiam@mathworks.com", phone2: "9133517197" },
     { id: 2, player1: "Bindusha Bommareddy", email1: "bindusha.b@gmail.com", phone1: "9086198618", player2: "Yeshwanth Devara", email2: "yesh.devara@gmail.com", phone2: "3528719551"  },
     { id: 3, player1: "Brian Demar Jones", email1: "bdemarjones82@gmail.com", phone1: "6077689496", player2: "Gitesh Nandre", email2: "gnandre@mathworks.com", phone2: "3477467380"  },
@@ -36,7 +36,7 @@ const doublesParticipants = [
     { id: 10, player1: "Tanner Bradford", email1: "wtannerb@verizon.net", phone1: "4129797016", player2: "Tori York", email2: "tori.york20@gmail.com", phone2: "8609463659"  }
 ];
 
-const singlesPlayerGroups = [
+export const singlesPlayerGroups = [
     [
         { id: 8, name: "Kevin McCauley", email: "kevinmccauley2007@gmail.com", phone: "9786603640", won: "", lost: "", draw: "", points: ""  },
         { id: 12, name: "Riccardo Consolo", email: "rconsolo@mathworks.com", phone: "6178165326", won: "", lost: "", draw: "", points: ""    },
@@ -67,7 +67,7 @@ const singlesPlayerGroups = [
     ]
 ];
 
-const doublesTeamsGroups = [
+export const doublesTeamsGroups = [
     [
         { id: 6, player1: "Ileen Thelen", email1: "ipinhasi@gmail.com", phone1: "6178039818", player2: "Mike", email2: "", phone2: "", won: "", lost: "", draw: "", points: ""    },
         { id: 9, player1: "Saurabh Gujare", email1: "gujare.s@northeastern.edu", phone1: "8578694580", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143", won: "", lost: "", draw: "", points: ""    },
