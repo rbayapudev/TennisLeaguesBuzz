@@ -1,6 +1,4 @@
-// doublesTeamsGroups injected from outside
-// Store groups in localStorage so the schedule page can access them
-localStorage.setItem('doublesTeamsGroups', JSON.stringify(doublesTeamsGroups));
+import { doublesTeamsGroups } from "./player-registrants.js";
 
 // Display groups on the page
 const groupsContainer = document.getElementById('groups-container');

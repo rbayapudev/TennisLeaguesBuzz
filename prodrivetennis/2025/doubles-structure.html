@@ -100,16 +100,11 @@
     </div>
 
     <script>
-        // Get current timestamp for cache busting
+        // Load the script for the page
         const timestampJs = new Date().getTime();
-        // Create and append JavaScript script
-        const playerJsScript = document.createElement('script');
-        playerJsScript.src = './js/player-registrants.js?v=' + timestampJs; // Link to the new JS file
-        document.body.appendChild(playerJsScript);
-        // Load the script file
-        // Create and append JavaScript script
         const jsScript = document.createElement('script');
         jsScript.src = './js/doubles-groups.js?v=' + timestampJs;
+        jsScript.type="module";
         jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
         document.body.appendChild(jsScript);
     </script>
