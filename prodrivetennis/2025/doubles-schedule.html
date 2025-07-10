@@ -16,7 +16,6 @@
     <script>
         // Get current timestamp for cache busting
         const timestampCss = new Date().getTime();
-
         // Create and append CSS link
         const cssLink = document.createElement('link');
         cssLink.rel = 'stylesheet';
@@ -86,11 +85,11 @@
     <script>
         // Get current timestamp for cache busting (re-using the same variable name is fine)
         const timestampJs = new Date().getTime();
-
         // Create and append JavaScript script
         const jsScript = document.createElement('script');
         jsScript.src = './js/doubles-schedule.js?v=' + timestampJs; // Link to the new JS file
         jsScript.defer = true; // Use defer to ensure HTML is parsed before script runs
+        jsScript.type="module";
         document.body.appendChild(jsScript);
     </script>
 </body>

@@ -1,3 +1,5 @@
+import { doublesTeamsGroups } from "./player-registrants.js";
+
 // Function to generate round-robin schedule for a given group of teams
 // For doubles, a "player" in the scheduling algorithm is a "team".
 // The 'players' array here will actually be an array of team arrays (e.g., [["P1", "P2"], ["P3", "P4"]])
@@ -39,24 +41,6 @@ function generateRoundRobinSchedule(teams) {
     return schedule;
 }
 
-// Doubles team group data directly embedded for independence
-const doublesTeamsGroups = [
-    [
-        ["Ileen Thelen", "Mike"],
-        ["Saurabh Gujare", "Trenton Squires"],
-        ["Anjana Srivastava", "Abhinav Sathiamoorthy"],
-        ["Tanner Bradford", "Tori York"],
-        ["Bindusha Bommareddy", "Yeshwanth Devara"]
-    ],
-    [
-        ["Cameron Stabile", "David Fern"],
-        ["Brian Demar Jones", "Gitesh Nandre"],
-        ["Riccardo Consolo", "Paola Donis Noriega"],
-        ["Kevin McCauley", "Zeeshan Khan"],
-        ["Dewi Nilamsari", "Noah Sung"]
-    ]
-];
-
 // Function to display the schedules on the page
 function displaySchedules() {
     console.log("displaySchedules function called for doubles.");
@@ -77,7 +61,7 @@ function displaySchedules() {
         const group = doublesTeamsGroups[index];
         const groupLetter = String.fromCharCode(65 + index); // Group A, B, etc.
         const groupSchedule = generateRoundRobinSchedule(group);
-
+        
         const groupDiv = document.createElement('div');
         groupDiv.className = 'group-schedule-card'; // Apply custom styling
         groupDiv.innerHTML = `
@@ -99,8 +83,8 @@ function displaySchedules() {
                             return weekMatches.map((match, matchIndex) => `
                                 <tr>
                                     ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex + 1}</td>` : ''}
-                                    <td>${match.type === 'bye' ? match.team1.join(' & ') : match.team1.join(' & ')}</td>
-                                    <td>${match.type === 'bye' ? 'BYE' : match.team2.join(' & ')}</td>
+                                    <td>${match.type === 'bye' ? (match.team1.player1 + ' & ' + match.team1.player2): (match.team1.player1 + ' & ' + match.team1.player2)}</td>
+                                    <td>${match.type === 'bye' ? 'BYE' : (match.team2.player1 + ' & ' + match.team2.player2)}</td>
                                     <td>${match.type === 'bye' ? '' : ' - '}</td> <!-- Placeholder for score -->
                                 </tr>
                             `).join('');
