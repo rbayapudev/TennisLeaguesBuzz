@@ -1,3 +1,5 @@
+import { singlesPlayerGroups } from "./player-registrants.js";
+
 // Function to generate round-robin schedule for a given group of players
 function generateRoundRobinSchedule(players) {
     const numPlayers = players.length;
@@ -37,37 +39,6 @@ function generateRoundRobinSchedule(players) {
     return schedule;
 }
 
-// Player group data directly embedded for independence
-const playerGroups = [
-    [
-        "Kevin McCauley",
-        "Riccardo Consolo",
-        "Shubham Mankar",
-        "Yeshwanth Devara"
-    ],
-    [
-        "Saurabh Gujare",
-        "Gitesh Nandre",
-        "Leah Kazenmayer",
-        "Bindusha Bommareddy",
-        "Trenton Squires"
-    ],
-    [
-        "Anjana Srivastava",
-        "Noah Sung",
-        "Robbie Gold",
-        "Paola Donis Noriega",
-        "Cameron Stabile"
-    ],
-    [
-        "Tanner Bradford",
-        "Abhinav Sathiamoorthy",
-        "Brian Demar Jones",
-        "Zeeshan Khan",
-        "Joshua Nasman"
-    ]
-];
-
 // Function to display the schedules on the page
 function displaySchedules() {
     console.log("displaySchedules function called.");
@@ -78,17 +49,17 @@ function displaySchedules() {
         return;
     }
 
-    if (playerGroups.length === 0) {
+    if (!singlesPlayerGroups || singlesPlayerGroups.length === 0) {
         scheduleContainer.innerHTML = '<p class="text-red-300 text-lg">No player group data available to generate schedule.</p>';
         console.warn("No player group data available.");
         return;
     }
 
-    for (let index = 0; index < playerGroups.length; index++) {
-        const group = playerGroups[index];
+    for (let index = 0; index < singlesPlayerGroups.length; index++) {
+        const group = singlesPlayerGroups[index];
         const groupLetter = String.fromCharCode(65 + index);
         const groupSchedule = generateRoundRobinSchedule(group);
-
+        
         const groupDiv = document.createElement('div');
         groupDiv.className = 'group-schedule-card'; // Apply custom styling
         groupDiv.innerHTML = `
@@ -110,8 +81,8 @@ function displaySchedules() {
                             return weekMatches.map((match, matchIndex) => `
                                 <tr>
                                     ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex + 1}</td>` : ''}
-                                    <td>${match.player1}</td>
-                                    <td>${match.type === 'bye' ? 'BYE' : match.player2}</td>
+                                    <td>${match.player1.name}</td>
+                                    <td>${match.type === 'bye' ? 'BYE' : match.player2.name}</td>
                                     <td>${match.type === 'bye' ? '' : ' - '}</td> <!-- Placeholder for score -->
                                 </tr>
                             `).join('');
