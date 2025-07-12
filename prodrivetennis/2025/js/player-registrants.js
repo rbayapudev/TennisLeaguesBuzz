@@ -83,3 +83,329 @@ export const doublesTeamsGroups = [
         { id: 5, player1: "Dewi Nilamsari", email1: "dnilamsari23@gmail.com", phone1: "5088636907", player2: "Noah Sung", email2: "noahsung99@gmail.com", phone2: "8472070038", won: "", lost: "", draw: "", points: ""    }
     ]
 ];
+
+export const singlesMatches = [
+];
+
+export const doublesMatches = [
+  {
+    "matchId": 1,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 9
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 2,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 1
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 3,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 10
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 4,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 2
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 5,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 9
+    },
+    "team2": {
+      "id": 1
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 6,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 9
+    },
+    "team2": {
+      "id": 10
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 7,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 9
+    },
+    "team2": {
+      "id": 2
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 8,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 1
+    },
+    "team2": {
+      "id": 10
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 9,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 1
+    },
+    "team2": {
+      "id": 2
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 10,
+    "group": "A",
+    "round": 1,
+    "team1": {
+      "id": 10
+    },
+    "team2": {
+      "id": 2
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 11,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 3
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 12,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 8
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 13,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 7
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 14,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 5
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 15,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 3
+    },
+    "team2": {
+      "id": 8
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 16,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 3
+    },
+    "team2": {
+      "id": 7
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 17,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 3
+    },
+    "team2": {
+      "id": 5
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 18,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 8
+    },
+    "team2": {
+      "id": 7
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 19,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 8
+    },
+    "team2": {
+      "id": 5
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  },
+  {
+    "matchId": 20,
+    "group": "B",
+    "round": 1,
+    "team1": {
+      "id": 7
+    },
+    "team2": {
+      "id": 5
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": ""
+  }
+];
