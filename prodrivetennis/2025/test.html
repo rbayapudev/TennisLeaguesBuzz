@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API Data</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top */
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+        .container {
+            max-width: 800px;
+            width: 100%; /* Make it fluid */
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Clear floats */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        .item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .item-id {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        .item-name {
+            color: #555;
+            font-size: 1em;
+        }
+        .item-data {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 6px;
+            white-space: pre-wrap; /* Preserve whitespace and wrap text */
+            word-break: break-all; /* Break long words */
+            font-size: 0.9em;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        .loading-message, .error-message {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            color: #666;
+        }
+        .error-message {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            .item {
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Objects from REST API</h1>
+        <div id="data-container">
+            <p class="loading-message">Loading data...</p>
+        </div>
+    </div>
+
+    <script>
+        // Define the REST API endpoint
+        const endpoint = 'https://api.restful-api.dev/objects';
+        // Get a reference to the HTML element where data will be displayed
+        const dataContainer = document.getElementById('data-container');
+
+        /**
+         * Fetches data from the specified REST API endpoint and displays it on the page.
+         */
+        async function fetchData() {
+            try {
+                // Perform the fetch request to the API
+                const response = await fetch(endpoint);
+                
+                // Check if the HTTP response was successful (status code 200-299)
+                if (!response.ok) {
+                    // If not successful, throw an error with the status
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                // Parse the JSON response body
+                const data = await response.json();
+                
+                // Clear any previous messages (like "Loading data...")
+                dataContainer.innerHTML = '';
+                
+                // Check if the fetched data is an array
+                if (Array.isArray(data)) {
+                    // Iterate over each item in the data array
+                    data.forEach(item => {
+                        // Create a new div element for each item
+                        const itemDiv = document.createElement('div');
+                        // Add a class for styling
+                        itemDiv.classList.add('item');
+                        
+                        // Populate the inner HTML of the item div with data
+                        // Using JSON.stringify for the 'data' field to display its content clearly
+                        itemDiv.innerHTML = `
+                            <div class="item-id">ID: ${item.id}</div>
+                            <div class="item-name">Name: ${item.name || 'N/A'}</div>
+                            <div class="item-data">
+                                <strong>Details:</strong> ${item.data ? JSON.stringify(item.data, null, 2) : 'No additional data'}
+                            </div>
+                        `;
+                        // Append the created item div to the main data container
+                        dataContainer.appendChild(itemDiv);
+                    });
+                } else {
+                    // If the data is not an array, display a message
+                    dataContainer.innerHTML = '<p class="error-message">Data received is not in the expected array format.</p>';
+                }
+
+            } catch (error) {
+                // Catch any errors during the fetch or processing
+                console.error('Error fetching data:', error);
+                // Display an error message to the user
+                dataContainer.innerHTML = `<p class="error-message">Failed to load data. Error: ${error.message}</p>`;
+            }
+        }
+
+        // Call the fetchData function when the script loads to initiate the process
+        fetchData();
+    </script>
+
+</body>
+</html>
