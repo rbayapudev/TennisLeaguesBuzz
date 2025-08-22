@@ -1,49 +1,8 @@
-import { doublesTeamsGroups } from "./player-registrants.js";
-
-// Function to generate round-robin schedule for a given group of teams
-// For doubles, a "player" in the scheduling algorithm is a "team".
-// The 'players' array here will actually be an array of team arrays (e.g., [["P1", "P2"], ["P3", "P4"]])
-function generateRoundRobinSchedule(teams) {
-    const numTeams = teams.length;
-    const schedule = [];
-
-    // If odd number of teams, add a 'BYE' team to make it even for scheduling
-    const participants = [...teams]; // Each participant is a team array
-    if (numTeams % 2 !== 0) {
-        participants.push("BYE"); // 'BYE' will represent a team with a bye
-    }
-
-    const totalRounds = participants.length - 1; // Number of weeks
-    const matchesPerRound = participants.length / 2;
-
-    // Use the circle method for scheduling
-    for (let round = 0; round < totalRounds; round++) {
-        const weekMatches = [];
-        for (let i = 0; i < matchesPerRound; i++) {
-            const team1 = participants[i];
-            const team2 = participants[participants.length - 1 - i];
-
-            // Store matches as objects for easier rendering in table columns
-            if (team1 !== "BYE" && team2 !== "BYE") {
-                weekMatches.push({ team1: team1, team2: team2, type: 'match' });
-            } else if (team1 === "BYE") {
-                weekMatches.push({ team1: team2, team2: 'BYE', type: 'bye' }); // Team 2 has a BYE
-            } else if (team2 === "BYE") {
-                weekMatches.push({ team1: team1, team2: 'BYE', type: 'bye' }); // Team 1 has a BYE
-            }
-        }
-        schedule.push(weekMatches);
-
-        // Rotate teams: Keep the first team fixed, rotate the rest clockwise
-        const lastTeam = participants.pop(); // Remove last team
-        participants.splice(1, 0, lastTeam); // Insert it after the first team
-    }
-    return schedule;
-}
+import { doublesParticipants, doublesTeamsGroups, doublesMatches } from "./player-registrants.js";
+import * as Utils from './utils.js';
 
 // Function to display the schedules on the page
 function displaySchedules() {
-    console.log("displaySchedules function called for doubles.");
     const scheduleContainer = document.getElementById('schedule-container');
 
     if (!scheduleContainer) {
@@ -51,51 +10,77 @@ function displaySchedules() {
         return;
     }
 
-    if (doublesTeamsGroups.length === 0) {
+    if (!doublesTeamsGroups || doublesTeamsGroups.length === 0) {
         scheduleContainer.innerHTML = '<p class="text-red-300 text-lg">No doubles team group data available to generate schedule.</p>';
         console.warn("No doubles team group data available.");
         return;
     }
 
-    for (let index = 0; index < doublesTeamsGroups.length; index++) {
-        const group = doublesTeamsGroups[index];
-        const groupLetter = String.fromCharCode(65 + index); // Group A, B, etc.
-        const groupSchedule = generateRoundRobinSchedule(group);
-        
-        const groupDiv = document.createElement('div');
-        groupDiv.className = 'group-schedule-card'; // Apply custom styling
-        groupDiv.innerHTML = `
-            <h2 class="text-2xl font-bold text-white mb-4">Group ${groupLetter} Schedule</h2>
-            <div class="overflow-x-auto">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Week</th>
-                            <th>Team 1</th>
-                            <th>Team 2</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${groupSchedule.map((weekMatches, weekIndex) => {
-                            // Calculate rowspan for the week
-                            const rowspan = weekMatches.length;
-                            return weekMatches.map((match, matchIndex) => `
-                                <tr>
-                                    ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex + 1}</td>` : ''}
-                                    <td>${match.type === 'bye' ? (match.team1.player1 + ' & ' + match.team1.player2): (match.team1.player1 + ' & ' + match.team1.player2)}</td>
-                                    <td>${match.type === 'bye' ? 'BYE' : (match.team2.player1 + ' & ' + match.team2.player2)}</td>
-                                    <td>${match.type === 'bye' ? '' : ' - '}</td> <!-- Placeholder for score -->
-                                </tr>
-                            `).join('');
-                        }).join('')}
-                    </tbody>
-                </table>
-            </div>
-        `;
-        scheduleContainer.appendChild(groupDiv);
+    // construct singles players map
+    const playersById = Utils.arrayToMap(doublesParticipants, 'id');
+    // construct groupedMatches
+    const groupedMatches = Utils.groupMatchesByRoundAndGroupForDoubles(doublesMatches, playersById);
+    const MAX_ROUND = 1;
+
+    for(let round = 1; round <= MAX_ROUND; round++) {
+        const roundMatches = groupedMatches[round];
+        if(roundMatches) {
+            for (let index = 0; index < doublesTeamsGroups.length; index++) {
+                //const group = doublesTeamsGroups[index];
+                //const groupSchedule = Utils.generateRoundRobinScheduleForDoubles(group);
+                const groupLetter = String.fromCharCode(65 + index); // Group A, B, etc.
+                const groupedMatchesByWeek = Utils.groupMatchesByWeek(roundMatches[groupLetter]);
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'group-schedule-card'; // Apply custom styling
+                groupDiv.innerHTML = _renderInnerHtmlFromObj(groupLetter, groupedMatchesByWeek);
+                scheduleContainer.appendChild(groupDiv);
+            }
+        }
     }
-    console.log("Doubles schedules should now be displayed.");
+}
+
+function _renderInnerHtmlFromObj(groupLetter, groupSchedule) {
+    return `
+        <h2 class="text-2xl font-bold text-white mb-4">Group ${groupLetter} Schedule</h2>
+        <div class="overflow-x-auto">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Player 1</th>
+                        <th>Player 2</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>              
+                <tbody>
+                    ${Object.entries(groupSchedule).map(([key, value]) => {
+                        const weekIndex = parseInt(key);
+                        const weekMatches = value;
+                        const rowspan = weekMatches.length;
+                
+                        return weekMatches.map((match, matchIndex) => {
+                            // Check if player1 or player2 is the winner
+                            const team1IsWinner = match.winnerId === match.team1.id;
+                            const team2IsWinner = match.winnerId === match.team2.id;
+                            
+                            // Add a CSS class based on who won
+                            const team1Class = team1IsWinner ? 'winner' : 'nowinner';
+                            const team2Class = team2IsWinner ? 'winner' : 'nowinner';
+                
+                            return `
+                                <tr>
+                                    ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex}</td>` : ''}
+                                    <td class="${team1Class}">${Utils.formatDoublesTeamName(match.team1)}</td>
+                                    <td class="${team2Class}">${match.type === 'bye' ? 'BYE' : Utils.formatDoublesTeamName(match.team2)}</td>
+                                    <td>${match.type === 'bye' ? '' : Utils.formatScores(match)}</td>
+                                </tr>
+                            `;
+                        }).join('');
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
 }
 
 // Dropdown toggle logic (replicated for this page's navbar)

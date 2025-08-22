@@ -95,6 +95,10 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+.winner {
+    background-color: slateblue !important
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .main-content > div { /* Target the main content card */
