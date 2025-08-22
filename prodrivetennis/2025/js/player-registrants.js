@@ -99,7 +99,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1, // week 1
+    "place": null,
+    "type": null // bye or regular
   },
   {
     "matchId": 2,
@@ -115,7 +118,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 3,
@@ -131,7 +137,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 4,
@@ -147,7 +156,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 5,
@@ -163,7 +175,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 6,
@@ -179,7 +194,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 7,
@@ -195,7 +213,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 8,
@@ -211,7 +232,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 9,
@@ -227,7 +251,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 10,
@@ -243,7 +270,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 11,
@@ -255,11 +285,14 @@ export const singlesMatches = [
     "player2": {
       "id": 6
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "0-6",
     "set3": "",
-    "winnerId": null,
-    "comment": ""
+    "winnerId": 6,
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 12,
@@ -275,7 +308,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 13,
@@ -291,7 +327,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 14,
@@ -307,7 +346,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 15,
@@ -323,7 +365,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 16,
@@ -339,7 +384,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 17,
@@ -355,7 +403,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 18,
@@ -371,7 +422,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 19,
@@ -387,7 +441,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 20,
@@ -403,7 +460,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 21,
@@ -419,7 +479,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 22,
@@ -435,7 +498,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 23,
@@ -451,7 +517,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 24,
@@ -467,7 +536,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 25,
@@ -483,7 +555,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 26,
@@ -499,7 +574,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 27,
@@ -515,7 +593,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 28,
@@ -531,7 +612,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 29,
@@ -547,7 +631,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 30,
@@ -563,7 +650,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 31,
@@ -579,7 +669,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 32,
@@ -595,7 +688,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 33,
@@ -611,7 +707,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 34,
@@ -627,7 +726,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 35,
@@ -643,7 +745,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 36,
@@ -659,7 +764,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 37,
@@ -675,7 +783,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 38,
@@ -691,7 +802,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 39,
@@ -707,7 +821,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 40,
@@ -723,7 +840,10 @@ export const singlesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   }
 ];
 
@@ -742,7 +862,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 2,
@@ -758,7 +881,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 3,
@@ -774,7 +900,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 4,
@@ -790,7 +919,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 5,
@@ -806,7 +938,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 6,
@@ -822,7 +957,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 7,
@@ -838,7 +976,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 8,
@@ -854,7 +995,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 9,
@@ -870,7 +1014,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 10,
@@ -886,7 +1033,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 11,
@@ -902,7 +1052,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 12,
@@ -918,7 +1071,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 1,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 13,
@@ -934,7 +1090,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 14,
@@ -950,7 +1109,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 2,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 15,
@@ -966,7 +1128,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 16,
@@ -982,7 +1147,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 3,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 17,
@@ -998,7 +1166,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 18,
@@ -1014,7 +1185,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 19,
@@ -1030,7 +1204,10 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   },
   {
     "matchId": 20,
@@ -1046,6 +1223,9 @@ export const doublesMatches = [
     "set2": "",
     "set3": "",
     "winnerId": null,
-    "comment": ""
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": null
   }
 ];
