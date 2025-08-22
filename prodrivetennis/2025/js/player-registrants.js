@@ -24,7 +24,7 @@ export const singlesParticipants = [
 
 // Player data for Doubles Participants
 export const doublesParticipants = [
-    { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Abhinav Sathiamoorthy", email2: "asathiam@mathworks.com", phone2: "9133517197" },
+    { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Shubham", email2: "smankar@mathworks.com", phone2: "5086472754" },
     { id: 2, player1: "Bindusha Bommareddy", email1: "bindusha.b@gmail.com", phone1: "9086198618", player2: "Yeshwanth Devara", email2: "yesh.devara@gmail.com", phone2: "3528719551"  },
     { id: 3, player1: "Brian Demar Jones", email1: "bdemarjones82@gmail.com", phone1: "6077689496", player2: "Gitesh Nandre", email2: "gnandre@mathworks.com", phone2: "3477467380"  },
     { id: 4, player1: "Cameron Stabile", email1: "cameron.stabile@gmail.com", phone1: "9084624706", player2: "David Fern", email2: "davidfink314@gmail.com", phone2: "9782012212"  },
@@ -32,7 +32,7 @@ export const doublesParticipants = [
     { id: 6, player1: "Ileen Thelen", email1: "ipinhasi@gmail.com", phone1: "6178039818", player2: "Mike", email2: "", phone2: ""  },
     { id: 7, player1: "Kevin McCauley", email1: "kevinmccauley2007@gmail.com", phone1: "9786603640", player2: "Zeeshan Khan", email2: "zskone77@gmail.com", phone2: "4436919290"  },
     { id: 8, player1: "Riccardo Consolo", email1: "rconsolo@mathworks.com", phone1: "6178165326", player2: "Paola Donis Noriega", email2: "paodonis@hotmail.com", phone2: "4103407822"  },
-    { id: 9, player1: "Saurabh Gujare", email1: "gujare.s@northeastern.edu", phone1: "8578694580", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143"  },
+    { id: 9, player1: "Abhinav Sathiamoorthy", email1: "asathiam@mathworks.com", phone1: "9133517197", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143"  },
     { id: 10, player1: "Tanner Bradford", email1: "wtannerb@verizon.net", phone1: "4129797016", player2: "Tori York", email2: "tori.york20@gmail.com", phone2: "8609463659"  }
 ];
 
@@ -70,8 +70,8 @@ export const singlesPlayerGroups = [
 export const doublesTeamsGroups = [
     [
         { id: 6, player1: "Ileen Thelen", email1: "ipinhasi@gmail.com", phone1: "6178039818", player2: "Mike", email2: "", phone2: "", won: "", lost: "", draw: "", points: ""    },
-        { id: 9, player1: "Saurabh Gujare", email1: "gujare.s@northeastern.edu", phone1: "8578694580", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143", won: "", lost: "", draw: "", points: ""    },
-        { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Abhinav Sathiamoorthy", email2: "asathiam@mathworks.com", phone2: "9133517197", won: "", lost: "", draw: "", points: ""   },
+        { id: 9, player1: "Abhinav Sathiamoorthy", email1: "asathiam@mathworks.com", phone1: "9133517197", player2: "Trenton Squires", email2: "trenton.c.squires@gmail.com", phone2: "7176453143" , won: "", lost: "", draw: "", points: ""     },
+        { id: 1, player1: "Anjana Srivastava", email1: "asrivast@mathworks.com", phone1: "9789059561",  player2: "Shubham", email2: "smankar@mathworks.com", phone2: "5086472754", won: "", lost: "", draw: "", points: ""     },
         { id: 10, player1: "Tanner Bradford", email1: "wtannerb@verizon.net", phone1: "4129797016", player2: "Tori York", email2: "tori.york20@gmail.com", phone2: "8609463659", won: "", lost: "", draw: "", points: ""    },
         { id: 2, player1: "Bindusha Bommareddy", email1: "bindusha.b@gmail.com", phone1: "9086198618", player2: "Yeshwanth Devara", email2: "yesh.devara@gmail.com", phone2: "3528719551", won: "", lost: "", draw: "", points: ""    }
     ],
@@ -190,10 +190,10 @@ export const singlesMatches = [
     "player2": {
       "id": 16
     },
-    "set1": "",
-    "set2": "",
+    "set1": "7-5",
+    "set2": "7-5",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 12,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -475,10 +475,10 @@ export const singlesMatches = [
     "player2": {
       "id": 10
     },
-    "set1": "",
-    "set2": "",
+    "set1": "3-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 10,
     "comment": "",
     "scheduledFor": 1,
     "place": null,
@@ -494,10 +494,10 @@ export const singlesMatches = [
     "player2": {
       "id": 13
     },
-    "set1": "",
-    "set2": "",
+    "set1": "4-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 13,
     "comment": "",
     "scheduledFor": 1,
     "place": null,
@@ -532,10 +532,10 @@ export const singlesMatches = [
     "player2": {
       "id": 5
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "2-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 5,
     "comment": "",
     "scheduledFor": 2,
     "place": null,
@@ -589,10 +589,10 @@ export const singlesMatches = [
     "player2": {
       "id": 5
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 5,
     "comment": "",
     "scheduledFor": 4,
     "place": null,
@@ -760,10 +760,10 @@ export const singlesMatches = [
     "player2": {
       "id": 20
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "2-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 20,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -1048,10 +1048,10 @@ export const doublesMatches = [
     "team2": {
       "id": 3
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-1",
+    "set2": "6-0",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 4,
     "comment": "",
     "scheduledFor": 1,
     "place": null,
@@ -1087,7 +1087,7 @@ export const doublesMatches = [
       "id": 7
     },
     "set1": "1-6",
-    "set2": "0-6",
+    "set2": "6-0",
     "set3": "4-6",
     "winnerId": 7,
     "comment": "",
@@ -1124,10 +1124,10 @@ export const doublesMatches = [
     "team2": {
       "id": 8
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 8,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -1181,10 +1181,10 @@ export const doublesMatches = [
     "team2": {
       "id": 7
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-4",
+    "set2": "6-4",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 8,
     "comment": "",
     "scheduledFor": 4,
     "place": null,

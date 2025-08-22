@@ -37,8 +37,7 @@ function groupLetter(index) {
     return String.fromCharCode(65 + index);
 }
 
-// Dropdown toggle logic (copied from singles page for consistency)
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
     const groupsDropdownButton = document.getElementById('groupsDropdownButton');
     const dropdown = groupsDropdownButton.closest('.dropdown');
 
@@ -52,4 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdown.classList.remove('active');
         }
     });
-});
+    // display the view
+    displayRoundRobinGroups();
+};  

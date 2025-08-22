@@ -85,7 +85,6 @@ function _renderInnerHtmlFromObj(groupLetter, groupSchedule) {
 
 // Dropdown toggle logic (replicated for this page's navbar)
 window.onload = function() {
-    console.log("window.onload event fired for doubles schedule."); // Added log for debugging
     const groupsDropdownButton = document.getElementById('groupsDropdownButton');
     const dropdown = groupsDropdownButton.closest('.dropdown');
 
