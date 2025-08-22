@@ -117,8 +117,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 8,
+    "comment": "Forfeit",
     "scheduledFor": 1,
     "place": null,
     "type": null
@@ -174,8 +174,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 12,
+    "comment": "Forfeit",
     "scheduledFor": 3,
     "place": null,
     "type": null
@@ -231,8 +231,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 16,
+    "comment": "Forfeit",
     "scheduledFor": 4,
     "place": null,
     "type": null
@@ -250,8 +250,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 19,
+    "comment": "Forfeit",
     "scheduledFor": 5,
     "place": null,
     "type": null
