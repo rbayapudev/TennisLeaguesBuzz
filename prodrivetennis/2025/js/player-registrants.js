@@ -133,10 +133,10 @@ export const singlesMatches = [
     "player2": {
       "id": 16
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-4",
+    "set2": "6-4",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 8,
     "comment": "",
     "scheduledFor": 2,
     "place": null,
@@ -307,8 +307,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 9,
+    "comment": "Injured opponent",
     "scheduledFor": 1,
     "place": null,
     "type": null
@@ -418,10 +418,10 @@ export const singlesMatches = [
     "player2": {
       "id": 3
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-0",
+    "set2": "6-1",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 9,
     "comment": "",
     "scheduledFor": 4,
     "place": null,
@@ -437,10 +437,10 @@ export const singlesMatches = [
     "player2": {
       "id": 18
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-1",
+    "set2": "6-3",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 9,
     "comment": "",
     "scheduledFor": 5,
     "place": null,
@@ -551,10 +551,10 @@ export const singlesMatches = [
     "player2": {
       "id": 13
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-3",
+    "set2": "6-3",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 10,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -570,10 +570,10 @@ export const singlesMatches = [
     "player2": {
       "id": 11
     },
-    "set1": "",
-    "set2": "",
-    "set3": "",
-    "winnerId": null,
+    "set1": "6-2",
+    "set2": "3-6",
+    "set3": "7-10",
+    "winnerId": 11,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -608,10 +608,10 @@ export const singlesMatches = [
     "player2": {
       "id": 11
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "0-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 11,
     "comment": "",
     "scheduledFor": 4,
     "place": null,
@@ -703,10 +703,10 @@ export const singlesMatches = [
     "player2": {
       "id": 20
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "1-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 20,
     "comment": "",
     "scheduledFor": 2,
     "place": null,
@@ -839,8 +839,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 20,
+    "comment": "Forefeit",
     "scheduledFor": 5,
     "place": null,
     "type": null
@@ -1029,10 +1029,10 @@ export const doublesMatches = [
     "team2": {
       "id": 2
     },
-    "set1": "",
-    "set2": "",
+    "set1": "4-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 2,
     "comment": "",
     "scheduledFor": 5,
     "place": null,
@@ -1108,8 +1108,8 @@ export const doublesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 4,
+    "comment": "Forfeit",
     "scheduledFor": 2,
     "place": null,
     "type": null
@@ -1143,10 +1143,10 @@ export const doublesMatches = [
     "team2": {
       "id": 7
     },
-    "set1": "",
-    "set2": "",
+    "set1": "2-6",
+    "set2": "1-6",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 7,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
@@ -1222,8 +1222,8 @@ export const doublesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 7,
+    "comment": "Forfeit",
     "scheduledFor": 5,
     "place": null,
     "type": null
