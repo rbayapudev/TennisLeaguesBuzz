@@ -174,3 +174,107 @@ export function generateRoundRobinScheduleForDoubles(teams) {
     }
     return schedule;
 }
+
+export function getPlayerStats(matches) {
+    const playerStats = {};
+  
+    matches.forEach(match => {
+      const p1Id = match.player1.id;
+      const p2Id = match.player2.id;
+      const winnerId = match.winnerId;
+  
+      // Initialize players if they don't exist in the stats map
+      if (!playerStats[p1Id]) {
+        playerStats[p1Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+      if (!playerStats[p2Id]) {
+        playerStats[p2Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+  
+      // Update played count for both players
+      playerStats[p1Id].played++;
+      playerStats[p2Id].played++;
+  
+      // Update win and loss counts based on the winnerId
+      if (winnerId === p1Id) {
+        playerStats[p1Id].won++;
+        playerStats[p2Id].lost++;
+      } else if (winnerId === p2Id) {
+        playerStats[p2Id].won++;
+        playerStats[p1Id].lost++;
+      } else {
+        // Handle cases with no winner, e.g., a draw, although not
+        // explicitly in the provided data structure, it's a good practice.
+        playerStats[p1Id].draw++;
+        playerStats[p2Id].draw++;
+      }
+    });
+  
+    return playerStats;
+  }
+
+  export function getPlayerStatsByRound(matches, roundNumber) {
+    const playerStats = {};
+  
+    // Filter matches to only include those from the specified round
+    const roundMatches = matches.filter(match => match.round === roundNumber);
+  
+    roundMatches.forEach(match => {
+      const p1Id = match.player1.id;
+      const p2Id = match.player2.id;
+      const winnerId = match.winnerId;
+  
+      // Initialize players if they don't exist
+      if (!playerStats[p1Id]) {
+        playerStats[p1Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+      if (!playerStats[p2Id]) {
+        playerStats[p2Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+  
+      // Update played count
+      playerStats[p1Id].played++;
+      playerStats[p2Id].played++;
+  
+      // Update win and loss counts based on the winnerId
+      if (winnerId === p1Id) {
+        playerStats[p1Id].won++;
+        playerStats[p2Id].lost++;
+      } else if (winnerId === p2Id) {
+        playerStats[p2Id].won++;
+        playerStats[p1Id].lost++;
+      } else {
+        // Handles potential draws, though not in the provided example
+        playerStats[p1Id].draw++;
+        playerStats[p2Id].draw++;
+      }
+    });
+  
+    return playerStats;
+  }
+
+  export function getGroupWithTeamStats(group, playerIdToPlayerStats) {
+    var result = group.map((player, index) => {
+        player.played = playerIdToPlayerStats[player.id].played;
+        player.won = playerIdToPlayerStats[player.id].won;
+        player.lost = playerIdToPlayerStats[player.id].lost;
+        player.draw = playerIdToPlayerStats[player.id].draw;
+        player.points = (playerIdToPlayerStats[player.id].won * 2) + playerIdToPlayerStats[player.id].draw;
+        return player;
+    });
+    return result;
+  }
+
+  export function sortByField(arr, field, ascending = true) {
+    return arr.sort((a, b) => {
+      if (typeof a[field] === 'string') {
+        return ascending
+          ? a[field].localeCompare(b[field])
+          : b[field].localeCompare(a[field]);
+      } else {
+        return ascending
+          ? a[field] - b[field]
+          : b[field] - a[field];
+      }
+    });
+  }
