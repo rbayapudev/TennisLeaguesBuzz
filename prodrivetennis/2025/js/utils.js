@@ -253,6 +253,46 @@ export function getPlayerStats(matches) {
     return playerStats;
   }
 
+  export function getTeamStatsByRound(matches, roundNumber) {
+    const playerStats = {};
+  
+    // Filter matches to only include those from the specified round
+    const roundMatches = matches.filter(match => match.round === roundNumber);
+  
+    roundMatches.forEach(match => {
+      const p1Id = match.team1.id;
+      const p2Id = match.team2.id;
+      const winnerId = match.winnerId;
+  
+      // Initialize players if they don't exist
+      if (!playerStats[p1Id]) {
+        playerStats[p1Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+      if (!playerStats[p2Id]) {
+        playerStats[p2Id] = { played: 0, won: 0, lost: 0, draw: 0 };
+      }
+  
+      // Update played count
+      playerStats[p1Id].played++;
+      playerStats[p2Id].played++;
+  
+      // Update win and loss counts based on the winnerId
+      if (winnerId === p1Id) {
+        playerStats[p1Id].won++;
+        playerStats[p2Id].lost++;
+      } else if (winnerId === p2Id) {
+        playerStats[p2Id].won++;
+        playerStats[p1Id].lost++;
+      } else {
+        // Handles potential draws, though not in the provided example
+        playerStats[p1Id].draw++;
+        playerStats[p2Id].draw++;
+      }
+    });
+  
+    return playerStats;
+  }
+
   export function getGroupWithTeamStats(group, playerIdToPlayerStats) {
     var result = group.map((player, index) => {
         player.played = playerIdToPlayerStats[player.id].played;
