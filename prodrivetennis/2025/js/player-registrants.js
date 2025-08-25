@@ -820,8 +820,8 @@ export const singlesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 4,
+    "comment": "Forefeit",
     "scheduledFor": 5,
     "place": null,
     "type": null
