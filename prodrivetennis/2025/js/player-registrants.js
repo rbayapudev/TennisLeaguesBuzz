@@ -896,10 +896,10 @@ export const doublesMatches = [
     "team2": {
       "id": 10
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-1",
+    "set2": "6-1",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 6,
     "comment": "",
     "scheduledFor": 2,
     "place": null,
@@ -953,10 +953,10 @@ export const doublesMatches = [
     "team2": {
       "id": 10
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-4",
+    "set2": "6-4",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 9,
     "comment": "",
     "scheduledFor": 3,
     "place": null,
