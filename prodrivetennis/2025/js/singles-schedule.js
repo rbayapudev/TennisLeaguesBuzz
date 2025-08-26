@@ -20,27 +20,88 @@ function displaySchedules() {
     const playersById = Utils.arrayToMap(singlesParticipants, 'id');
     // construct groupedMatches
     const groupedMatches = Utils.groupMatchesByRoundAndGroup(singlesMatches, playersById);
-    const MAX_ROUND = 1;
+    const MAX_ROUND = 2;
     
     for(let round = 1; round <= MAX_ROUND; round++) {
         const roundMatches = groupedMatches[round];
-        if(roundMatches) {
+        if((round == 1) && roundMatches) {
+            // display the round - 1 schedule
+            scheduleContainer.appendChild(renderTitle("Round 1 - Round Robin"));
             for (let index = 0; index < singlesPlayerGroups.length; index++) {
-                //const group = singlesPlayerGroups[index];
-                //const groupSchedule = Utils.generateRoundRobinSchedule(group);
                 const groupLetter = String.fromCharCode(65 + index);
                 const groupedMatchesByWeek = Utils.groupMatchesByWeek(roundMatches[groupLetter]);
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'group-schedule-card'; // Apply custom styling
-                //groupDiv.innerHTML = _renderInnerHtmlFromArr(groupLetter, groupSchedule);
-                groupDiv.innerHTML = _renderInnerHtmlFromObj(groupLetter, groupedMatchesByWeek);
+                groupDiv.innerHTML = _renderRRInnerHtmlFromObj(groupLetter, groupedMatchesByWeek);
                 scheduleContainer.appendChild(groupDiv);
+            }
+        }
+        else {
+            const playOffScheduleContainer = document.getElementById('playoff-schedule-container');
+            if((round == 2) && roundMatches) {
+                // display the round - 2 schedule
+                playOffScheduleContainer.appendChild(renderTitle("Round 2 - Quarter Finals"));
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'group-schedule-card'; // Apply custom styling
+                groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("QF", roundMatches);
+                playOffScheduleContainer.appendChild(groupDiv);
             }
         }
     }
 }
 
-function _renderInnerHtmlFromObj(groupLetter, groupSchedule) {
+function renderTitle(title) {
+    const titleDiv = document.createElement('div');
+    titleDiv.innerHTML = `
+        <h2 class="text-2xl font-bold text-white mb-4">${title}</h2>
+    `;
+    return titleDiv;
+}
+
+function _renderPlayoffInnerHtmlFromObj(title, roundMatches) {
+    return `
+        <h2 class="text-2xl font-bold text-white mb-4">${title} Schedule</h2>
+        <div class="overflow-x-auto">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Match</th>
+                        <th>Player 1</th>
+                        <th>Player 2</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>              
+                <tbody>
+                    ${Object.entries(roundMatches).map(([key, value]) => {
+                        const weekMatches = value;
+                        const rowspan = weekMatches.length;
+                
+                        return weekMatches.map((match, matchIndex) => {
+                            // Check if player1 or player2 is the winner
+                            const player1IsWinner = match.winnerId === match.player1.id;
+                            const player2IsWinner = match.winnerId === match.player2.id;
+                            
+                            // Add a CSS class based on who won
+                            const player1Class = player1IsWinner ? 'winner' : 'nowinner';
+                            const player2Class = player2IsWinner ? 'winner' : 'nowinner';
+                
+                            return `
+                                <tr>
+                                    ${matchIndex === 0 ? `<td rowspan="${rowspan}">${key}</td>` : ''}
+                                    <td class="${player1Class}">${match.player1.name}</td>
+                                    <td class="${player2Class}">${match.type === 'bye' ? 'BYE' : match.player2.name}</td>
+                                    <td>${match.type === 'bye' ? '' : Utils.formatScores(match)}</td>
+                                </tr>
+                            `;
+                        }).join('');
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+function _renderRRInnerHtmlFromObj(groupLetter, groupSchedule) {
     return `
         <h2 class="text-2xl font-bold text-white mb-4">Group ${groupLetter} Schedule</h2>
         <div class="overflow-x-auto">
@@ -77,38 +138,6 @@ function _renderInnerHtmlFromObj(groupLetter, groupSchedule) {
                                 </tr>
                             `;
                         }).join('');
-                    }).join('')}
-                </tbody>
-            </table>
-        </div>
-    `;
-}
-
-function _renderInnerHtmlFromArr(groupLetter, groupSchedule) {
-    return `
-        <h2 class="text-2xl font-bold text-white mb-4">Group ${groupLetter} Schedule</h2>
-        <div class="overflow-x-auto">
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Week</th>
-                        <th>Player 1</th>
-                        <th>Player 2</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${groupSchedule.map((weekMatches, weekIndex) => {
-                        // Calculate rowspan for the week
-                        const rowspan = weekMatches.length;
-                        return weekMatches.map((match, matchIndex) => `
-                            <tr>
-                                ${matchIndex === 0 ? `<td rowspan="${rowspan}">Week ${weekIndex + 1}</td>` : ''}
-                                <td>${match.player1.name}</td>
-                                <td>${match.type === 'bye' ? 'BYE' : match.player2.name}</td>
-                                <td>${match.type === 'bye' ? '' : ' - '}</td> <!-- Placeholder for score -->
-                            </tr>
-                        `).join('');
                     }).join('')}
                 </tbody>
             </table>

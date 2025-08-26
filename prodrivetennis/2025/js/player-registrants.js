@@ -844,7 +844,84 @@ export const singlesMatches = [
     "scheduledFor": 5,
     "place": null,
     "type": null
-  }
+  },
+  // QF
+  {
+    "matchId": 41,
+    "group": "QF1",
+    "round": 2,
+    "player1": {
+      "id": 19
+    },
+    "player2": {
+      "id": 9
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
+  {
+    "matchId": 42,
+    "group": "QF2",
+    "round": 2,
+    "player1": {
+      "id": 5
+    },
+    "player2": {
+      "id": 1
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
+  {
+    "matchId": 43,
+    "group": "QF3",
+    "round": 2,
+    "player1": {
+      "id": 6
+    },
+    "player2": {
+      "id": 12
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
+  {
+    "matchId": 44,
+    "group": "QF4",
+    "round": 2,
+    "player1": {
+      "id": 20
+    },
+    "player2": {
+      "id": 11
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
 ];
 
 export const doublesMatches = [
