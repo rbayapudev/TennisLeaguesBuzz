@@ -1304,5 +1304,43 @@ export const doublesMatches = [
     "scheduledFor": 5,
     "place": null,
     "type": null
+  },
+  {
+    "matchId": 21,
+    "group": "SF1",
+    "round": 2,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 8
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "SF"
+  },
+  {
+    "matchId": 22,
+    "group": "SF2",
+    "round": 2,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 1
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "SF"
   }
 ];
