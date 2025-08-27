@@ -41,7 +41,7 @@ function displaySchedules() {
             const playOffScheduleContainer = document.getElementById('playoff-schedule-container');
             if((round == 2) && roundMatches) {
                 // display the round - 2 schedule
-                playOffScheduleContainer.appendChild(renderTitle("Round 2 - Semi Finals"));
+                playOffScheduleContainer.appendChild(renderTitle("Round 2 - Quater Finals"));
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'group-schedule-card'; // Apply custom styling
                 groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("QF", roundMatches);
