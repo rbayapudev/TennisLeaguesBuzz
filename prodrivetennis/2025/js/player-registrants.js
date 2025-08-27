@@ -1307,10 +1307,29 @@ export const doublesMatches = [
   },
   {
     "matchId": 21,
-    "group": "SF1",
+    "group": "QF1",
     "round": 2,
     "team1": {
       "id": 6
+    },
+    "team2": {
+      "id": 3
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
+  {
+    "matchId": 22,
+    "group": "QF2",
+    "round": 2,
+    "team1": {
+      "id": 2
     },
     "team2": {
       "id": 8
@@ -1322,14 +1341,33 @@ export const doublesMatches = [
     "comment": "",
     "scheduledFor": 6,
     "place": null,
-    "type": "SF"
+    "type": "QF"
   },
   {
-    "matchId": 22,
-    "group": "SF2",
+    "matchId": 23,
+    "group": "QF3",
     "round": 2,
     "team1": {
       "id": 4
+    },
+    "team2": {
+      "id": 9
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "QF"
+  },
+  {
+    "matchId": 24,
+    "group": "QF4",
+    "round": 2,
+    "team1": {
+      "id": 7
     },
     "team2": {
       "id": 1
@@ -1341,6 +1379,6 @@ export const doublesMatches = [
     "comment": "",
     "scheduledFor": 6,
     "place": null,
-    "type": "SF"
+    "type": "QF"
   }
 ];

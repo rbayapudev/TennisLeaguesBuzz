@@ -64,7 +64,7 @@ body {
 /* Playoff table specific styles */
 .playoff-bracket {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Semis, Final */
+    grid-template-columns: repeat(3, 1fr);  /* Quarters, Semis, Final */
     gap: 1rem;
     margin-top: 2rem;
     text-align: center;

@@ -44,7 +44,7 @@ function displaySchedules() {
                 playOffScheduleContainer.appendChild(renderTitle("Round 2 - Semi Finals"));
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'group-schedule-card'; // Apply custom styling
-                groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("SF", roundMatches);
+                groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("QF", roundMatches);
                 playOffScheduleContainer.appendChild(groupDiv);
             }
         }
