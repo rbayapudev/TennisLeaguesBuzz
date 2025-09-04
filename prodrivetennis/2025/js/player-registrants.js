@@ -856,10 +856,10 @@ export const singlesMatches = [
     "player2": {
       "id": 9
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-3",
+    "set2": "6-3",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 19,
     "comment": "",
     "scheduledFor": 6,
     "place": null,
@@ -913,10 +913,10 @@ export const singlesMatches = [
     "player2": {
       "id": 11
     },
-    "set1": "",
-    "set2": "",
+    "set1": 6-2,
+    "set2": 6-2,
     "set3": "",
-    "winnerId": "",
+    "winnerId": 20,
     "comment": "",
     "scheduledFor": 6,
     "place": null,
@@ -1315,10 +1315,10 @@ export const doublesMatches = [
     "team2": {
       "id": 3
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-2",
+    "set2": "6-3",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 6,
     "comment": "",
     "scheduledFor": 6,
     "place": null,
