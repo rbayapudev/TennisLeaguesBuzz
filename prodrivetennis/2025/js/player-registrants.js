@@ -1353,10 +1353,10 @@ export const doublesMatches = [
     "team2": {
       "id": 9
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-1",
+    "set2": "6-0",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 4,
     "comment": "",
     "scheduledFor": 6,
     "place": null,
