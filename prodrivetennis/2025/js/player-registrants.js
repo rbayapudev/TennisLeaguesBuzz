@@ -922,6 +922,45 @@ export const singlesMatches = [
     "place": null,
     "type": "QF"
   },
+  // SF
+  {
+    "matchId": 45,
+    "group": "SF1",
+    "round": 3,
+    "player1": {
+      "id": 5
+    },
+    "player2": {
+      "id": 19
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "SF"
+  },
+  {
+    "matchId": 45,
+    "group": "SF2",
+    "round": 3,
+    "player1": {
+      "id": 6
+    },
+    "player2": {
+      "id": 20
+    },
+    "set1": "2-6",
+    "set2": "7-5",
+    "set3": "1-6",
+    "winnerId": 20,
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "SF"
+  },
 ];
 
 export const doublesMatches = [
@@ -1334,10 +1373,10 @@ export const doublesMatches = [
     "team2": {
       "id": 8
     },
-    "set1": "",
-    "set2": "",
+    "set1": "1-6",
+    "set2": "3-6",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 8,
     "comment": "",
     "scheduledFor": 6,
     "place": null,
@@ -1380,5 +1419,43 @@ export const doublesMatches = [
     "scheduledFor": 6,
     "place": null,
     "type": "QF"
+  },
+  {
+    "matchId": 25,
+    "group": "SF1",
+    "round": 3,
+    "team1": {
+      "id": 6
+    },
+    "team2": {
+      "id": 8
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 7,
+    "place": null,
+    "type": "SF"
+  },
+  {
+    "matchId": 26,
+    "group": "SF2",
+    "round": 3,
+    "team1": {
+      "id": 4
+    },
+    "team2": {
+      "id": 7
+    },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": "",
+    "comment": "",
+    "scheduledFor": 7,
+    "place": null,
+    "type": "SF"
   }
 ];

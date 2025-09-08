@@ -20,9 +20,9 @@ function displaySchedules() {
     const playersById = Utils.arrayToMap(singlesParticipants, 'id');
     // construct groupedMatches
     const groupedMatches = Utils.groupMatchesByRoundAndGroup(singlesMatches, playersById);
-    const MAX_ROUND = 2;
+    const MAX_ROUND = 3;
     
-    for(let round = 1; round <= MAX_ROUND; round++) {
+    for(let round = MAX_ROUND; round >= 1; round--) {
         const roundMatches = groupedMatches[round];
         if((round == 1) && roundMatches) {
             // display the round - 1 schedule
@@ -44,6 +44,14 @@ function displaySchedules() {
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'group-schedule-card'; // Apply custom styling
                 groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("QF", roundMatches);
+                playOffScheduleContainer.appendChild(groupDiv);
+            }
+            if((round == 3) && roundMatches) {
+                // display the round - 3 schedule
+                playOffScheduleContainer.appendChild(renderTitle("Round 3 - Semi Finals"));
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'group-schedule-card'; // Apply custom styling
+                groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("SF", roundMatches);
                 playOffScheduleContainer.appendChild(groupDiv);
             }
         }
