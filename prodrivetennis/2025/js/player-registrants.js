@@ -961,6 +961,7 @@ export const singlesMatches = [
     "place": null,
     "type": "SF"
   },
+  // Finals
   {
     "matchId": 46,
     "group": "F1",
@@ -971,10 +972,10 @@ export const singlesMatches = [
     "player2": {
       "id": 20
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-2",
+    "set2": "6-4",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 5,
     "comment": "",
     "scheduledFor": 7,
     "place": null,
@@ -1477,6 +1478,7 @@ export const doublesMatches = [
     "place": null,
     "type": "SF"
   },
+  // Finals
   {
     "matchId": 27,
     "group": "F1",
@@ -1487,10 +1489,10 @@ export const doublesMatches = [
     "team2": {
       "id": 7
     },
-    "set1": "",
-    "set2": "",
+    "set1": "6-7",
+    "set2": "2-6",
     "set3": "",
-    "winnerId": "",
+    "winnerId": 7,
     "comment": "",
     "scheduledFor": 7,
     "place": null,
