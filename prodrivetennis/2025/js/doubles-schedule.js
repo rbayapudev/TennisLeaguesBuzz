@@ -62,6 +62,13 @@ function displaySchedules() {
                 groupDiv.className = 'group-schedule-card'; // Apply custom styling
                 groupDiv.innerHTML = _renderPlayoffInnerHtmlFromObj("Finals", roundMatches);
                 playOffScheduleContainer.appendChild(groupDiv);
+
+                // Display the tournament winner
+                const championContainer = document.getElementById('champion-display-container');
+                const championDiv = document.createElement('div');
+                championDiv.className = 'group-schedule-card'; // Apply custom styling
+                championDiv.innerHTML = _renderChampionInnerHtmlFromObj(roundMatches);
+                championContainer.appendChild(championDiv);
             }
         }
     }
@@ -75,6 +82,28 @@ function renderTitle(title) {
     return titleDiv;
 }
 
+function _renderChampionInnerHtmlFromObj(roundMatches) {
+    // 1. Access the match data
+    const match = roundMatches['F1'][0];
+    // 2. Logic to determine the winning team
+    let winningTeam;
+    if (match.winnerId === match.team1.id) {
+        winningTeam = match.team1;
+    } else if (match.winnerId === match.team2.id) {
+        winningTeam = match.team2;
+    }
+    const winnerName = `${winningTeam.player1} & ${winningTeam.player2}`;
+    return `
+        <div class="champion-card">
+            <div class="trophy-container">
+                <div class="trophy-animation">🏆</div>
+                <div class="sparkles"></div>
+            </div>
+            <h2 class="champion-title">Tournament Champion</h2>
+            <div class="winner-name">${winnerName}</div>
+        </div>
+    `;
+}
 
 function _renderPlayoffInnerHtmlFromObj(title, roundMatches) {
     return `
