@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ProDrive Tennis Season 2026 - Rules</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .update-message-box {
+    margin-bottom: 30px;
+  }
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    transform: translateY(0.5rem);
+    pointer-events: none;
+  }
+  .dropdown-menu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.2s;
+  }
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+</style>
+</head>
+<body class="text-gray-100 antialiased">
+
+  <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+    <div class="container mx-auto px-4 flex items-center">
+      <a href="#" class="text-2xl font-extrabold text-white no-underline hover:text-gray-200 transition-colors duration-200 mr-8"> ProDrive Tennis</a>
+      <div class="flex items-center">
+        <div class="relative inline-block ml-2 dropdown">
+            <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                Schedules <span class="ml-1">&#9662;</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                <a href="singles-schedule.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                <a href="doubles-schedule.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+            </div>
+        </div>
+        <div class="relative inline-block ml-2 dropdown">
+            <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                Groups <span class="ml-1">&#9662;</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                <a href="singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                <a href="doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+            </div>
+        </div>
+        <a href="registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
+        <a href="rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
+        <a href="terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2 class="text-2xl font-semibold mb-3 text-white text-center">2026 Tournament Rules</h2>
+
+    <div class="w-full max-w-4xl grid grid-cols-1 gap-6">
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Match Location</h2>
+        <ul>
+            <li>- <b>Location:</b> Matches should preferably be played in or around Natick.</li>
+            <li>- <b>Coordination:</b> Both teams are responsible for coordinating and agreeing upon the match time and location.</li>
+            <li>- <b>Court Booking:</b> Please note that this is a friendly tournament; organizers will not reserve courts. Teams are responsible for securing their own court.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Start Time</h2>
+        <ul>
+            <li>- <b>Start Time:</b> The default start time for all matches is 6:00 PM on the scheduled day.</li>
+            <li>- <b>Rescheduling:</b> Teams may mutually agree to a different start time.</li>
+            <li>- <b>Forfeit Rule:</b> A forfeit will be enforced if a team fails to appear within 30 minutes of the scheduled start time (i.e., by 6:30 PM for a 6:00 PM start) or within 30 minutes of the alternatively agreed-upon time.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Match Format and Scoring System</h2>
+        <ul>
+            <li>- <b>Match Format:</b> All matches are best two out of three sets.</li>
+            <li>- <b>Scoring - Points:</b> Points are scored as 15, 30, 40, Game.</li>
+            <li>- <b>Scoring - Games:</b> A player must win at least four points and have a two-point lead to win a game (e.g., 40-advantage, then next point wins).</li>
+            <li>- <b>Scoring - Sets:</b> To win a set, a player must win at least six games and have a two-game lead (e.g., 6-4).</li>
+            <li>- <b>Set Tie-break:</b> If a set reaches a score of 6-6, a standard tie-break will be played. The first player to reach seven points with a two-point lead wins the tie-break and the set (e.g., 7-6).</li>
+            <li>- <b>Match Tie-break (Super Set / Third Set Option):</b>
+              <ul>
+                <li>-- If the match score reaches one set all (1-1), a super tie-break (first to 10 points with a two-point lead) will be played to determine the match winner.</li>
+                <li>-- However, if both teams mutually agree to play a full third set, the standard set scoring practice (first to six games with a two-game lead, with a tie-break at 6-6) will apply for that third set.</li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Match Scheduling</h2>
+        <ul>
+            <li>- <b>Weekly Assignments:</b> Each match will be assigned a specific week. Both teams are responsible for planning to complete their match within this designated week.</li>
+            <li>- <b>Team Coordination:</b> It's up to both teams to coordinate and agree upon the exact date, time, and location for their match.</li>
+            <li>- <b>Recommendation:</b> To help with scheduling, we recommend playing singles matches on Monday and doubles matches on Wednesday.</li>
+            <li>- <b>Forfeiture:</b> If a team fails to commit to playing their match within the assigned week, they will forfeit the match, and the opposing team will be declared the winner.</li>
+            <li>- <b>Rain Washouts - Regular Season:</b> All rain-affected matches must be completed before the end of their assigned week. If unsupportive weather persists, organizers will provide one additional week at the end of the Round-1 scheduling period specifically for finishing these matches.</li>
+            <li>- <b>Rain Washouts - Playoffs:</b> In the playoffs, any rain-washed out matches will be rescheduled for another day within the same playoff week.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">New CAN of Balls</h2>
+        <ul>
+            <li>- <b>Ball Requirement:</b> Each team needs to bring a new, unopened can of tennis balls to every match.</li>
+            <li>- <b>Ball Condition:</b> Before starting play, both teams should inspect the condition of the balls. If both teams agree, they can open and use an additional can for the match.</li>
+            <li>- <b>Winner Keeps Balls:</b> The winning team gets to keep the unopened can of balls.</li>
+            <li>- <b>No Sponsorship:</b> Please note that organizers won't be providing tennis balls, as this is a friendly tournament.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Score Reporting</h2>
+        <ul>
+            <li>- The winning team is responsible for reporting the match score immediately after each match using our online form. If you encounter any issues with the form, please contact the organizers as soon as possible. Your prompt score reporting is crucial and greatly appreciated!</li>
+        </ul>
+      </div>
+
+      <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-6 text-left border border-white border-opacity-30">
+        <h2 class="text-2xl font-semibold mb-3 text-white text-center">Conduct and Dispute Resolution</h2>
+        <ul>
+            <li>- If you encounter an unresolved issue with any team or player, please report the issue directly to the organizers. This ensures fair play and a positive environment for everyone.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-gray-300 text-sm text-center">
+      <p>&copy; 2026 ProDrive Tennis. All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ProDrive Tennis - Participation Disclaimer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    transform: translateY(0.5rem);
+    pointer-events: none;
+  }
+  .dropdown-menu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.2s;
+  }
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+</style>
+</head>
+<body class="text-gray-100 antialiased">
+
+  <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+    <div class="container mx-auto px-4 flex items-center">
+      <a href="#" class="text-2xl font-extrabold text-white no-underline hover:text-gray-200 transition-colors duration-200 mr-8"> ProDrive Tennis</a>
+      <div class="flex items-center">
+        <div class="relative inline-block ml-2 dropdown">
+            <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                Schedules <span class="ml-1">&#9662;</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                <a href="singles-schedule.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                <a href="doubles-schedule.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+            </div>
+        </div>
+        <div class="relative inline-block ml-2 dropdown">
+            <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                Groups <span class="ml-1">&#9662;</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                <a href="singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                <a href="doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+            </div>
+        </div>
+        <a href="registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
+        <a href="rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
+        <a href="terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl w-full text-center border border-white border-opacity-30">
+      <h1 class="text-2xl md:text-5xl font-bold mb-6 text-white leading-tight">
+        Participation Disclaimer
+      </h1>
+      <p class="text-lg md:text-xl mb-8 text-gray-200 text-left">
+        I have voluntarily decided to participate in this Tennis club/league consisting colleagues and friends. Play and practice will occur outside of normal working hours. I understand and agree that I am doing so at my own risk, knowing the inherent risks of playing tennis, and I hereby release the tennis club/league office bearers and their employers, voluntary team organizers and other team members from any and all possible actions, causes of actions, damages, claims or demands against such parties for any and all injuries I may suffer in connection with or resulting from participation with this tennis league/club.
+      </p>
+    </div>
+
+    <div class="mt-10 text-gray-300 text-sm">
+      <p>&copy; 2026 ProDrive Tennis. All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
+</html>

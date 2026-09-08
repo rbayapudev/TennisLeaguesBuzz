@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDrive Tennis - Singles Schedule</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        const timestampCss = new Date().getTime();
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = './css/singles-schedule.css?v=' + timestampCss;
+        document.head.appendChild(cssLink);
+    </script>
+</head>
+<body class="text-gray-100 antialiased">
+
+    <nav class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-md p-4 flex justify-center items-center rounded-b-lg">
+        <div class="container mx-auto px-4 flex items-center">
+            <a href="#" class="text-2xl font-extrabold text-white no-underline hover:text-gray-200 transition-colors duration-200 mr-8"> ProDrive Tennis</a>
+            <div class="flex items-center">
+                <div class="relative inline-block ml-2 dropdown">
+                    <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                        Schedules <span class="ml-1">&#9662;</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                        <a href="singles-schedule.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                        <a href="doubles-schedule.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+                    </div>
+                </div>
+                <div class="relative inline-block ml-2 dropdown">
+                    <button class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 focus:outline-none" id="groupsDropdownButton">
+                        Groups <span class="ml-1">&#9662;</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="groupsDropdownButton">
+                        <a href="singles-structure.html" class="text-gray-800 hover:bg-gray-100">Singles</a>
+                        <a href="doubles-structure.html" class="text-gray-800 hover:bg-gray-100">Doubles</a>
+                    </div>
+                </div>
+                <a href="registrants.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200">Registrations</a>
+                <a href="rules.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Rules</a>
+                <a href="terms.html" class="text-lg font-semibold text-white px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-20 transition-colors duration-200 ml-2">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl w-full text-center border border-white border-opacity-30">
+            <h1 class="text-2xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                Singles Schedule
+            </h1>
+
+            <div id="champion-display-container" class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+            </div>
+
+            <div id="playoff-schedule-container" class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+            </div>
+
+            <div id="schedule-container" class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="singles-structure.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Back to Singles Groups
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-10 text-gray-300 text-sm">
+            <p>&copy; 2026 ProDrive Tennis. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const timestampJs = new Date().getTime();
+        const jsScript = document.createElement('script');
+        jsScript.src = './js/singles-schedule.js?v=' + timestampJs;
+        jsScript.type="module";
+        jsScript.defer = true;
+        document.body.appendChild(jsScript);
+    </script>
+</body>
+</html>
