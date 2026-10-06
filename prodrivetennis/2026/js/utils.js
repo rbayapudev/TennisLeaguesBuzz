@@ -214,8 +214,8 @@ export function getPlayerStats(matches) {
   export function getPlayerStatsByRound(matches, roundNumber) {
     const playerStats = {};
 
-    // Filter matches to only include those from the specified round
-    const roundMatches = matches.filter(match => match.round === roundNumber);
+    // Filter matches to only include those from the specified round that have been played
+    const roundMatches = matches.filter(match => match.round === roundNumber && match.winnerId !== null);
 
     roundMatches.forEach(match => {
       const p1Id = match.player1.id;
@@ -254,7 +254,7 @@ export function getPlayerStats(matches) {
     const playerStats = {};
 
     // Filter matches to only include those from the specified round
-    const roundMatches = matches.filter(match => match.round === roundNumber);
+    const roundMatches = matches.filter(match => match.round === roundNumber && match.winnerId !== null);
 
     roundMatches.forEach(match => {
       const p1Id = match.team1.id;
@@ -290,12 +290,14 @@ export function getPlayerStats(matches) {
   }
 
   export function getGroupWithTeamStats(group, playerIdToPlayerStats) {
+    const defaultStats = { played: 0, won: 0, lost: 0, draw: 0 };
     var result = group.map((player, index) => {
-        player.played = playerIdToPlayerStats[player.id].played;
-        player.won = playerIdToPlayerStats[player.id].won;
-        player.lost = playerIdToPlayerStats[player.id].lost;
-        player.draw = playerIdToPlayerStats[player.id].draw;
-        player.points = (playerIdToPlayerStats[player.id].won * 2) + playerIdToPlayerStats[player.id].draw;
+        const stats = playerIdToPlayerStats[player.id] || defaultStats;
+        player.played = stats.played;
+        player.won = stats.won;
+        player.lost = stats.lost;
+        player.draw = stats.draw;
+        player.points = (stats.won * 2) + stats.draw;
         return player;
     });
     return result;
