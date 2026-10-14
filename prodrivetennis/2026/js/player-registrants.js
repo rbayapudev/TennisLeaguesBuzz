@@ -248,6 +248,70 @@ export const singlesMatches = [
     "scheduledFor": 3,
     "place": null,
     "type": "bye"
+  },
+  // QF: Winner Group A vs Runner-up Group B
+  {
+    "matchId": 13,
+    "group": "QF1",
+    "round": 2,
+    "player1": { "id": 1 },
+    "player2": { "id": 6 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Winner Group C vs Runner-up Group D
+  {
+    "matchId": 14,
+    "group": "QF2",
+    "round": 2,
+    "player1": { "id": 2 },
+    "player2": { "id": 11 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Winner Group B vs Runner-up Group A
+  {
+    "matchId": 15,
+    "group": "QF3",
+    "round": 2,
+    "player1": { "id": 8 },
+    "player2": { "id": 5 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Winner Group D vs Runner-up Group C
+  {
+    "matchId": 16,
+    "group": "QF4",
+    "round": 2,
+    "player1": { "id": 4 },
+    "player2": { "id": 7 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
   }
 ];
 
@@ -433,5 +497,69 @@ export const doublesMatches = [
     "scheduledFor": 3,
     "place": null,
     "type": "bye"
+  },
+  // QF: Group A Rank 1 vs Group B Rank 4
+  {
+    "matchId": 13,
+    "group": "QF1",
+    "round": 2,
+    "team1": { "id": 1 },
+    "team2": { "id": 4 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Group A Rank 3 vs Group B Rank 2
+  {
+    "matchId": 14,
+    "group": "QF2",
+    "round": 2,
+    "team1": { "id": 6 },
+    "team2": { "id": 5 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Group B Rank 1 vs Group A Rank 4
+  {
+    "matchId": 15,
+    "group": "QF3",
+    "round": 2,
+    "team1": { "id": 2 },
+    "team2": { "id": 8 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
+  },
+  // QF: Group B Rank 3 vs Group A Rank 2
+  {
+    "matchId": 16,
+    "group": "QF4",
+    "round": 2,
+    "team1": { "id": 3 },
+    "team2": { "id": 7 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 4,
+    "place": null,
+    "type": "QF"
   }
 ];
