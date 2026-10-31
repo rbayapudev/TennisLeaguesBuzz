@@ -312,6 +312,38 @@ export const singlesMatches = [
     "scheduledFor": 4,
     "place": null,
     "type": "QF"
+  },
+  // SF: Winner QF1 vs Winner QF2
+  {
+    "matchId": 17,
+    "group": "SF1",
+    "round": 3,
+    "player1": { "id": 1 },
+    "player2": { "id": 2 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": "SF"
+  },
+  // SF: Winner QF3 vs Winner QF4
+  {
+    "matchId": 18,
+    "group": "SF2",
+    "round": 3,
+    "player1": { "id": 5 },
+    "player2": { "id": 4 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": "SF"
   }
 ];
 
@@ -561,5 +593,37 @@ export const doublesMatches = [
     "scheduledFor": 4,
     "place": null,
     "type": "QF"
+  },
+  // SF: Winner QF1 vs Winner QF2
+  {
+    "matchId": 17,
+    "group": "SF1",
+    "round": 3,
+    "team1": { "id": 1 },
+    "team2": { "id": 5 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": "SF"
+  },
+  // SF: Winner QF3 vs Winner QF4
+  {
+    "matchId": 18,
+    "group": "SF2",
+    "round": 3,
+    "team1": { "id": 2 },
+    "team2": { "id": 3 },
+    "set1": "",
+    "set2": "",
+    "set3": "",
+    "winnerId": null,
+    "comment": "",
+    "scheduledFor": 5,
+    "place": null,
+    "type": "SF"
   }
 ];
