@@ -320,10 +320,10 @@ export const singlesMatches = [
     "round": 3,
     "player1": { "id": 1 },
     "player2": { "id": 2 },
-    "set1": "",
-    "set2": "",
-    "set3": "",
-    "winnerId": null,
+    "set1": "2-6",
+    "set2": "6-4",
+    "set3": "6-2",
+    "winnerId": 1,
     "comment": "",
     "scheduledFor": 5,
     "place": null,
@@ -336,14 +336,30 @@ export const singlesMatches = [
     "round": 3,
     "player1": { "id": 5 },
     "player2": { "id": 4 },
-    "set1": "",
-    "set2": "",
+    "set1": "6-2",
+    "set2": "6-4",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 5,
     "comment": "",
     "scheduledFor": 5,
     "place": null,
     "type": "SF"
+  },
+  // Final: Winner SF1 vs Winner SF2
+  {
+    "matchId": 19,
+    "group": "Final",
+    "round": 4,
+    "player1": { "id": 1 },
+    "player2": { "id": 5 },
+    "set1": "4-6",
+    "set2": "7-5",
+    "set3": "4-6",
+    "winnerId": 5,
+    "comment": "",
+    "scheduledFor": 6,
+    "place": null,
+    "type": "Final"
   }
 ];
 
