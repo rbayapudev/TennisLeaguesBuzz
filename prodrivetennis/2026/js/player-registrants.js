@@ -508,11 +508,11 @@ export const doublesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 1,
+    "comment": "BYE",
     "scheduledFor": 4,
     "place": null,
-    "type": "QF"
+    "type": "bye"
   },
   // QF: Group A Rank 3 vs Group B Rank 2
   {
@@ -521,10 +521,10 @@ export const doublesMatches = [
     "round": 2,
     "team1": { "id": 6 },
     "team2": { "id": 5 },
-    "set1": "",
-    "set2": "",
+    "set1": "4-6",
+    "set2": "5-7",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 5,
     "comment": "",
     "scheduledFor": 4,
     "place": null,
@@ -540,11 +540,11 @@ export const doublesMatches = [
     "set1": "",
     "set2": "",
     "set3": "",
-    "winnerId": null,
-    "comment": "",
+    "winnerId": 2,
+    "comment": "BYE",
     "scheduledFor": 4,
     "place": null,
-    "type": "QF"
+    "type": "bye"
   },
   // QF: Group B Rank 3 vs Group A Rank 2
   {
@@ -553,10 +553,10 @@ export const doublesMatches = [
     "round": 2,
     "team1": { "id": 3 },
     "team2": { "id": 7 },
-    "set1": "",
-    "set2": "",
+    "set1": "6-4",
+    "set2": "6-3",
     "set3": "",
-    "winnerId": null,
+    "winnerId": 3,
     "comment": "",
     "scheduledFor": 4,
     "place": null,
