@@ -348,7 +348,7 @@ export const singlesMatches = [
   // Final: Winner SF1 vs Winner SF2
   {
     "matchId": 19,
-    "group": "Final",
+    "group": "F1",
     "round": 4,
     "player1": { "id": 1 },
     "player2": { "id": 5 },
@@ -359,7 +359,7 @@ export const singlesMatches = [
     "comment": "",
     "scheduledFor": 6,
     "place": null,
-    "type": "Final"
+    "type": "F"
   }
 ];
 
